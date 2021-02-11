@@ -56,18 +56,33 @@ export default {
   },
   //2.页面渲染之前执行，一般调用methods定义的方法
   created(){
-    //2.1判断路径是否有id值
-    if (this.$route.params && this.$route.params.id) {
-      //2.2从路径中获取id值
-      //this.$route.params得到路由中参数
-      const id = this.$route.params.id
-      //根据id值调用查询讲师方法
-      this.getInfo(id)
-    }
-
+    this.init()
   },
+
+  watch: { //监听
+    $route(to, from) {
+      this.init()
+    }
+  },
+
   //3.创建具体的方法
   methods:{
+    init() {
+      //2.1判断路径是否有id值
+      if (this.$route.params && this.$route.params.id) {
+        //2.2从路径中获取id值
+        //this.$route.params得到路由中参数
+        const id = this.$route.params.id
+        //根据id值调用查询讲师方法
+        this.getInfo(id)
+      }
+      else{
+        //路径中没有id值，做添加
+        this.teacher={} //清空表单
+      }
+    },
+
+
     //3.1 根据讲师id查询的方法
     getInfo(id){
       teacherApi.getTeacherInfo(id)
