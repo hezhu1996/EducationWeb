@@ -1,0 +1,85 @@
+2021-02-22 19:00:04.483 [main] INFO  com.hezhu.edu.EduApplication - Starting EduApplication on DESKTOP-RVPIET4 with PID 19680 (started by HeZhu in E:\3.Java\5.谷粒学院\2.代码\edu_parent)
+2021-02-22 19:00:04.486 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-02-22 19:00:05.032 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-22 19:00:05.033 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-22 19:00:05.048 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2021-02-22 19:00:05.220 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-22 19:00:05.373 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-02-22 19:00:05.379 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-02-22 19:00:05.379 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-02-22 19:00:05.380 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-02-22 19:00:05.453 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-02-22 19:00:05.453 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 939 ms
+2021-02-22 19:00:05.786 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-02-22 19:00:05.949 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-02-22 19:00:05.958 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-02-22 19:00:05.960 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-02-22 19:00:05.962 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-02-22 19:00:05.969 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-22 19:01:39.546 [main] INFO  com.hezhu.edu.EduApplication - Starting EduApplication on DESKTOP-RVPIET4 with PID 25412 (started by HeZhu in E:\3.Java\5.谷粒学院\2.代码\edu_parent)
+2021-02-22 19:01:39.548 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-02-22 19:01:40.109 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-22 19:01:40.111 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-22 19:01:40.126 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2021-02-22 19:01:40.279 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-22 19:01:40.460 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-02-22 19:01:40.466 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-02-22 19:01:40.467 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-02-22 19:01:40.467 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-02-22 19:01:40.538 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-02-22 19:01:40.539 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 960 ms
+2021-02-22 19:01:40.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-02-22 19:01:40.712 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-02-22 19:01:40.722 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-02-22 19:01:40.730 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-02-22 19:01:40.732 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-02-22 19:01:40.738 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-22 19:02:34.300 [main] INFO  com.hezhu.edu.EduApplication - Starting EduApplication on DESKTOP-RVPIET4 with PID 20604 (started by HeZhu in E:\3.Java\5.谷粒学院\2.代码\edu_parent)
+2021-02-22 19:02:34.302 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-02-22 19:02:34.898 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-22 19:02:34.900 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-22 19:02:34.915 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2021-02-22 19:02:35.078 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-22 19:02:35.240 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-02-22 19:02:35.246 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-02-22 19:02:35.246 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-02-22 19:02:35.246 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-02-22 19:02:35.316 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-02-22 19:02:35.317 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 986 ms
+2021-02-22 19:02:35.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-02-22 19:02:35.489 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-02-22 19:02:35.499 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-02-22 19:02:35.506 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-02-22 19:02:35.508 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-02-22 19:02:35.515 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-22 19:04:11.762 [main] INFO  com.hezhu.edu.EduApplication - Starting EduApplication on DESKTOP-RVPIET4 with PID 25060 (started by HeZhu in E:\3.Java\5.谷粒学院\2.代码\edu_parent)
+2021-02-22 19:04:11.764 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-02-22 19:04:12.347 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-22 19:04:12.349 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-22 19:04:12.364 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2021-02-22 19:04:12.524 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-22 19:04:12.691 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-02-22 19:04:12.697 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-02-22 19:04:12.697 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-02-22 19:04:12.697 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-02-22 19:04:12.769 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-02-22 19:04:12.769 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 974 ms
+2021-02-22 19:04:12.883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-02-22 19:04:12.949 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-02-22 19:04:13.436 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-22 19:04:13.498 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 19:04:13.772 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-02-22 19:04:13.781 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-02-22 19:04:13.797 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-02-22 19:04:13.913 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2021-02-22 19:04:13.932 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2021-02-22 19:04:13.933 [main] INFO  com.hezhu.edu.EduApplication - Started EduApplication in 2.446 seconds (JVM running for 2.899)
+2021-02-22 19:04:28.136 [http-nio-8001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 19:04:28.136 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-02-22 19:04:28.140 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
