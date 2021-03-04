@@ -80,7 +80,7 @@
             <el-radio :label="true">免费</el-radio>
             <el-radio :label="false">默认</el-radio>
         </el-radio-group>
-        </el-form-item>
+        </el-form-item> 
         <el-form-item label="上传视频">
         <!-- TODO -->
         </el-form-item>

@@ -1,17 +1,23 @@
 package com.hezhu.edu.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hezhu.edu.entity.Course;
 import com.hezhu.edu.entity.CourseDescription;
 import com.hezhu.edu.entity.vo.CourseInfoVo;
+import com.hezhu.edu.entity.vo.CourseQuery;
 import com.hezhu.edu.entity.vo.coursePublishVo;
 import com.hezhu.edu.mapper.CourseMapper;
+import com.hezhu.edu.service.ChapterService;
 import com.hezhu.edu.service.CourseDescriptionService;
 import com.hezhu.edu.service.CourseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hezhu.edu.service.VideoService;
 import com.hezhu.servicebase.exceptionhandler.HeZhuException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 /**
  * <p>
@@ -26,6 +32,12 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     @Autowired
     private CourseDescriptionService courseDescriptionService;
+
+    @Autowired
+    private VideoService videoService;
+
+    @Autowired
+    private ChapterService chapterService;
 
     //1.添加课程：基本信息
     @Override
@@ -90,6 +102,57 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     public coursePublishVo publishCourseInfo(String id) {
         coursePublishVo publishCourseInfo = baseMapper.getPublishCourseInfo(id);
         return publishCourseInfo;
+    }
+
+    //5. 条件查询courseList
+    @Override
+    public void pageQuery(Page<Course> pageCourse, CourseQuery courseQuery) {
+        //构造查询条件
+        QueryWrapper<Course> wrapper = new QueryWrapper<>();
+
+        //多条件动态组合 + 动态sql
+        String title = courseQuery.getTitle();
+        String teacherId = courseQuery.getTeacherId();
+        String subjectParentId = courseQuery.getSubjectParentId();
+        String subjectId = courseQuery.getSubjectId();
+        String status = courseQuery.getStatus();
+
+        //判断条件是否为空，不为空则拼接条件
+        if(!StringUtils.isEmpty(title)){
+            //构造条件: "数据库", 条件
+            wrapper.like("title", title);
+        }
+        if(!StringUtils.isEmpty(teacherId)){
+            wrapper.eq("teacher_id", teacherId);
+        }
+        if (!StringUtils.isEmpty(subjectParentId)) {
+            wrapper.ge("subject_parent_id", subjectParentId);
+        }
+        if(!StringUtils.isEmpty(subjectId)){
+            wrapper.ge("subject_id", subjectId);
+        }
+        if (!StringUtils.isEmpty(status)) {
+            wrapper.eq("status", status);
+        }
+
+        //查询后的结果，储存在pageCourse
+        baseMapper.selectPage(pageCourse, wrapper);
+    }
+
+    //9.删除课程
+    @Override
+    public void removeCourse(String courseId) {
+        //根据课程id删除：小节
+        videoService.removeVideoByCourseId(courseId);
+        //根据课程id删除：章节
+        chapterService.removeChapterByCourseId(courseId);
+        //根据课程id删除：描述，描述id和课程id是同一个id
+        courseDescriptionService.removeById(courseId);
+        //根据课程id删除：课程本身
+        int result = baseMapper.deleteById(courseId);
+        if(result == 0){
+            throw new HeZhuException(20001, "删除失败");
+        }
     }
 }
 

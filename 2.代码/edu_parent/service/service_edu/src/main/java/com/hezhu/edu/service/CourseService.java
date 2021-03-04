@@ -1,8 +1,10 @@
 package com.hezhu.edu.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hezhu.edu.entity.Course;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hezhu.edu.entity.vo.CourseInfoVo;
+import com.hezhu.edu.entity.vo.CourseQuery;
 import com.hezhu.edu.entity.vo.coursePublishVo;
 
 /**
@@ -25,4 +27,10 @@ public interface CourseService extends IService<Course> {
 
     //4.根据课程id查询：publish最终信息
     coursePublishVo publishCourseInfo(String id);
+
+    //5. 条件查询courseList
+    void pageQuery(Page<Course> pageCourse, CourseQuery courseQuery);
+
+    //9.删除课程
+    void removeCourse(String courseId);
 }
