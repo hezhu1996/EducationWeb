@@ -36,12 +36,14 @@ export default {
     })
   },
 
-  //4. 删除章节：根据id
+  //5. 删除章节：根据id
   deleteChapter(chapterId) {
     return request({
       url: `/eduservice/chapter/deleteChapter/${chapterId}`,
       method: 'delete',
     })
   },
+
+
 
 }

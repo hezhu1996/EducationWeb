@@ -81,9 +81,29 @@
             <el-radio :label="false">默认</el-radio>
         </el-radio-group>
         </el-form-item> 
+        <!-- 上传视频 -->
         <el-form-item label="上传视频">
-        <!-- TODO -->
+            <el-upload
+                :on-success="handleVodUploadSuccess"
+                :on-remove="handleVodRemove"
+                :before-remove="beforeVodRemove"
+                :on-exceed="handleUploadExceed"
+                :file-list="fileList"
+                :action="BASE_API+'/eduvod/video/uploadAliyunVideo'"
+                :limit="1"
+                class="upload-demo">
+            <el-button size="small" type="primary">上传视频</el-button>
+            <el-tooltip placement="right-end">
+                <div slot="content">最大支持1G，<br>
+                    支持3GP、ASF、AVI、DAT、DV、FLV、F4V、<br>
+                    GIF、M2T、M4V、MJ2、MJPEG、MKV、MOV、MP4、<br>
+                    MPE、MPG、MPEG、MTS、OGG、QT、RM、RMVB、<br>
+                    SWF、TS、VOB、WMV、WEBM 等视频格式上传</div>
+                <i class="el-icon-question"/>
+            </el-tooltip>
+            </el-upload>
         </el-form-item>
+
     </el-form>
     <div slot="footer" class="dialog-footer">
         <el-button @click="dialogVideoFormVisible = false">取 消</el-button>
@@ -106,12 +126,16 @@ export default {
       saveBtnDisabled: false, // 保存按钮是否禁用
       chapterVideoList:[], //所有章节数据
       courseId:'',
+      
+      //章节
       dialogChapterFormVisible:false, //弹框是否弹出
       chapter:{
         courseId:'',
         title: '',
         sort: 0
       },
+      
+      //小节
       dialogVideoFormVisible:false, //小节弹框
       video: {// 课时对象
         title: '',
@@ -119,6 +143,11 @@ export default {
         isFree: 0,
         videoSourceId: ''
       },
+      
+      //阿里云点播
+      fileList: [],//上传文件列表
+      BASE_API: process.env.BASE_API, // 接口API地址
+
     }
   },
 //--------------------------- Create ---------------------------------
@@ -137,6 +166,48 @@ export default {
 
 //--------------------------- Method ---------------------------------
   methods: {
+//============================= 阿里云点播 =====================================
+    //成功回调
+    handleVodUploadSuccess(response, file, fileList){ //后端接口返回的数据被response自动接收
+        //上传视频id赋值
+        this.video.videoSourceId = response.data.videoId
+        //上传视频名称赋值
+        this.video.videoOriginalName = file.name
+
+    },
+
+    //视图上传多于一个视频
+    handleUploadExceed(files, fileList) {
+        this.$message.warning('想要重新上传视频，请先删除已上传的视频')
+    },
+
+    //点击×：调用beforeVodRemove -> 点击确定，调用handleVodRemove
+    beforeVodRemove(file, fileList){
+        return this.$confirm(`确定删除 ${file.name}?`)
+    },
+
+    //点击确定：调用handleVodRemove
+    handleVodRemove(){
+        //调用后端接口，在阿里云删除视频
+        video.deleteAliyunVod(this.video.videoSourceId)
+            .then(response => {
+                //提示信息
+                this.$message({
+                    type: 'success',
+                    message: '删除视频成功'
+                });
+                //清空文件列表
+                this.fileList = []
+
+                //清除数据库中的内容
+                this.video.videoSourceId = ''
+                this.video.videoOriginalName = ''
+
+            })
+    },
+
+
+
 //============================= 小节操作 =====================================
     //1. 添加/修改 小节
     saveOrUpdateVideo(){
@@ -178,6 +249,9 @@ export default {
 
         //小节中需要：设置章节id
         this.video.chapterId = chapterId
+
+        //清空文件列表
+        this.fileList = []
     },
 
     //4.修改小节

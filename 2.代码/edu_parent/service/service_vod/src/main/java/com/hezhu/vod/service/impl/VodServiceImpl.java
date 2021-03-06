@@ -3,12 +3,19 @@ package com.hezhu.vod.service.impl;
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadStreamRequest;
 import com.aliyun.vod.upload.resp.UploadStreamResponse;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
+import com.hezhu.commonutils.R;
+import com.hezhu.servicebase.exceptionhandler.HeZhuException;
 import com.hezhu.vod.service.VodService;
 import com.hezhu.vod.utils.ConstantVodUtils;
+import com.hezhu.vod.utils.InitVodClient;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.util.List;
 
 @Service
 public class VodServiceImpl implements VodService {
@@ -48,6 +55,26 @@ public class VodServiceImpl implements VodService {
         catch (Exception e){
             e.printStackTrace();
             return null;
+        }
+    }
+
+    //删除多个阿里云视频的方法
+    @Override
+    public void removeMultiAliyunVideo(List<String> videoIdList) {
+        try {
+            //初始化对象
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
+            //创建删除视频request对象
+            DeleteVideoRequest request = new DeleteVideoRequest();
+            //向request设置视频id
+            String videoIds = StringUtils.join(videoIdList.toArray(), ",");
+            request.setVideoIds(videoIds);
+            //调用初始化对象的方法进行删除
+            client.getAcsResponse(request);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new HeZhuException(20001, "删除视频失败");
         }
     }
 }

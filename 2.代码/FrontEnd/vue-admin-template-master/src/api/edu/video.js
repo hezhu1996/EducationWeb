@@ -36,4 +36,12 @@ export default {
     })
   },
 
+  //5. 删除阿里云视频：根据videoid
+  deleteAliyunVod(videoId) {
+    return request({
+      url: `/eduvod/video/removeAliyunVideo/${videoId}`,
+      method: 'delete',
+    })
+  },
+
 }

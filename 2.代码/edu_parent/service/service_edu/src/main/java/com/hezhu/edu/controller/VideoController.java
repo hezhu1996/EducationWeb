@@ -2,9 +2,11 @@ package com.hezhu.edu.controller;
 
 
 import com.hezhu.commonutils.R;
+import com.hezhu.edu.client.VodClient;
 import com.hezhu.edu.entity.Video;
 import com.hezhu.edu.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -44,10 +46,26 @@ public class VideoController {
         return R.ok();
     }
 
+    //注入VodClient
+    @Autowired
+    private VodClient vodClient;
+
     //3.删除小节
     //TODO 需要完善：删除小节，需要同时删除视频
     @DeleteMapping("deleteVideo/{id}")
     public R deleteVideo(@PathVariable String id){
+        //注意：先删视频 + 再删小节 （videoId）
+
+        //1.根据小节id，获取视频id
+        Video eduVideo = videoService.getById(id);
+        String videoSourceId = eduVideo.getVideoSourceId();
+
+        //2.删除视频：根据视频id(判断是否有视频id)
+        if(!StringUtils.isEmpty(videoSourceId)){
+            vodClient.removeAliyunVideo(videoSourceId);
+        }
+
+        //3.删除小节：根据小节id
         videoService.removeById(id);
         return R.ok();
     }

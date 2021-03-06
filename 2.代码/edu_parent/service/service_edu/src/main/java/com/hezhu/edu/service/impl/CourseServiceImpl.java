@@ -142,7 +142,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     //9.删除课程
     @Override
     public void removeCourse(String courseId) {
-        //根据课程id删除：小节
+        //根据课程id删除：小节 + 同时删除阿里云视频
         videoService.removeVideoByCourseId(courseId);
         //根据课程id删除：章节
         chapterService.removeChapterByCourseId(courseId);
