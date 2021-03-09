@@ -7,11 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service_edu" />
         <module name="service_oss" />
         <module name="common_utils" />
         <module name="service_vod" />
         <module name="service_base" />
+        <module name="service_edu" />
+        <module name="service_msm" />
+        <module name="service_cms" />
+        <module name="service_ucenter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,8 +23,11 @@
       <module name="edu_parent" target="11" />
       <module name="service" target="11" />
       <module name="service_base" target="11" />
+      <module name="service_cms" target="11" />
       <module name="service_edu" target="11" />
+      <module name="service_msm" target="11" />
       <module name="service_oss" target="11" />
+      <module name="service_ucenter" target="11" />
       <module name="service_vod" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -32,8 +38,11 @@
       <module name="edu_parent" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service_base" options="-parameters" />
+      <module name="service_cms" options="-parameters" />
       <module name="service_edu" options="-parameters" />
+      <module name="service_msm" options="-parameters" />
       <module name="service_oss" options="-parameters" />
+      <module name="service_ucenter" options="-parameters" />
       <module name="service_vod" options="-parameters" />
     </option>
   </component>
