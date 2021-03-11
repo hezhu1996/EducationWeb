@@ -21,5 +21,7 @@ public class ConstantVodUtils implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         ACCESS_KEY_ID = keyId;
         ACCESS_KEY_SECRET = keySecret;
+
+        System.out.println(keyId);
     }
 }
