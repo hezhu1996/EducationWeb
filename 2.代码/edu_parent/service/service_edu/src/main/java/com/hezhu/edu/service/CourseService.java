@@ -3,9 +3,13 @@ package com.hezhu.edu.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hezhu.edu.entity.Course;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hezhu.edu.entity.frontvo.CourseFrontVo;
+import com.hezhu.edu.entity.frontvo.CourseWebVo;
 import com.hezhu.edu.entity.vo.CourseInfoVo;
 import com.hezhu.edu.entity.vo.CourseQuery;
 import com.hezhu.edu.entity.vo.coursePublishVo;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -33,4 +37,11 @@ public interface CourseService extends IService<Course> {
 
     //9.删除课程
     void removeCourse(String courseId);
+
+
+    //1.条件查询+分页
+    Map<String, Object> getCourseFrontList(Page<Course> pageCourse, CourseFrontVo courseFrontVo);
+
+    //2.查询课程详情信息
+    CourseWebVo getBaseCourseInfo(String courseId);
 }

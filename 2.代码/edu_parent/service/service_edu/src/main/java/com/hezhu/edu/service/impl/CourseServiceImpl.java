@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hezhu.edu.entity.Course;
 import com.hezhu.edu.entity.CourseDescription;
+import com.hezhu.edu.entity.EduTeacher;
+import com.hezhu.edu.entity.frontvo.CourseFrontVo;
+import com.hezhu.edu.entity.frontvo.CourseWebVo;
 import com.hezhu.edu.entity.vo.CourseInfoVo;
 import com.hezhu.edu.entity.vo.CourseQuery;
 import com.hezhu.edu.entity.vo.coursePublishVo;
@@ -18,6 +21,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -153,6 +160,72 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         if(result == 0){
             throw new HeZhuException(20001, "删除失败");
         }
+    }
+
+    //1.条件查询+分页 - 前台
+    @Override
+    public Map<String, Object> getCourseFrontList(Page<Course> pageCourse, CourseFrontVo courseFrontVo) {
+        //1.根据讲师id查询所有课程 + 条件
+        QueryWrapper<Course> wrapper = new QueryWrapper<>();
+        //2.判断条件值是否为空，不为空则拼接
+
+        //一级分类
+        if(!StringUtils.isEmpty(courseFrontVo.getSubjectParentId())){
+            wrapper.eq("subject_parent_id", courseFrontVo.getSubjectParentId());
+        }
+
+        //二级分类
+        if(!StringUtils.isEmpty(courseFrontVo.getSubjectId())){
+            wrapper.eq("subject_id", courseFrontVo.getSubjectId());
+        }
+
+        //关注度
+        if(!StringUtils.isEmpty(courseFrontVo.getBuyCountSort())){
+            wrapper.orderByDesc("buy_count", courseFrontVo.getBuyCountSort());
+        }
+
+        //最新
+        if(!StringUtils.isEmpty(courseFrontVo.getGmtCreateSort())){
+            wrapper.orderByDesc("gmt_create", courseFrontVo.getGmtCreateSort());
+        }
+
+        //价格
+        if(!StringUtils.isEmpty(courseFrontVo.getPriceSort())){
+            wrapper.orderByDesc("price", courseFrontVo.getPriceSort());
+        }
+
+        //数据库查询
+        baseMapper.selectPage(pageCourse, wrapper);
+
+        //3.把pageTeacher中的信息全部提取出来
+        List<Course> records = pageCourse.getRecords();
+        long current = pageCourse.getCurrent();
+        long pages = pageCourse.getPages();
+        long size = pageCourse.getSize();
+        long total = pageCourse.getTotal();
+        //是否有下一页？
+        boolean hasNext = pageCourse.hasNext();
+        //是否有上一页？
+        boolean hasPrevious = pageCourse.hasPrevious();
+
+
+        //4.分页数据获取出来，并放入map
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("items", records);
+        map.put("current", current);
+        map.put("pages", pages);
+        map.put("size", size);
+        map.put("total", total);
+        map.put("hasNext", hasNext);
+        map.put("hasPrevious", hasPrevious);
+
+        return map;
+    }
+
+    //2.查询课程详情信息 - 前台
+    @Override
+    public CourseWebVo getBaseCourseInfo(String courseId) {
+        return baseMapper.getBaseCourseInfo(courseId);
     }
 }
 

@@ -2,6 +2,8 @@ package com.hezhu.vod.controller;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.hezhu.commonutils.R;
 import com.hezhu.servicebase.exceptionhandler.HeZhuException;
 import com.hezhu.vod.service.VodService;
@@ -55,6 +57,27 @@ public class VodController {
     public R deleteBatch(@RequestParam("videoIdList") List<String> videoIdList) {
         vodService.removeMultiAliyunVideo(videoIdList);
         return R.ok();
+    }
+
+    //4.根据视频id，获取视频token
+    @GetMapping("getPlayAuth/{id}")
+    public R getPlayAuth(@PathVariable String id) {
+        try {
+            //1.初始化对象
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
+            //2.创建获取凭证的request和response对象
+            GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+            //3.向request设置id
+            request.setVideoId(id);
+            //4.调用方法获得凭证
+            GetVideoPlayAuthResponse response = client.getAcsResponse(request);
+            String playAuth = response.getPlayAuth();
+
+            return R.ok().data("playAuth", playAuth);
+        }
+        catch (Exception e){
+            throw new HeZhuException(20001, "获取阿里云视频凭证失败");
+        }
     }
 
 }
