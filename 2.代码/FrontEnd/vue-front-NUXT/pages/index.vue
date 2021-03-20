@@ -2,14 +2,14 @@
   
   <div>
     <!-- 幻灯片 开始 -->
-    <div v-swiper:mySwiper="swiperOption">
+    <div v-swiper:mySwiper="swiperOption" style="height: 1000px">
         <div class="swiper-wrapper">
 
             <!-- 遍历 -->
             <div v-for="banner in bannerList" :key="banner.id" class="swiper-slide" style="background: #040B1B;">
                 <a target="_blank" :href="banner.linkUrl">
                     <!-- alt:光标移动：显示信息 -->
-                    <img :src="banner.imageUrl" :alt="banner.title">
+                    <img  :src="banner.imageUrl" :alt="banner.title" class="dis c-v-pic">
                 </a>
             </div>
 

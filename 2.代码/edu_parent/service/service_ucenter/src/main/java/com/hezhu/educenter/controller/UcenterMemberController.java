@@ -3,9 +3,12 @@ package com.hezhu.educenter.controller;
 
 import com.hezhu.commonutils.JwtUtils;
 import com.hezhu.commonutils.R;
+import com.hezhu.commonutils.vo.UcenterMemberOrder;
+import com.hezhu.commonutils.vo.UcenterMemberVo;
 import com.hezhu.educenter.entity.UcenterMember;
 import com.hezhu.educenter.entity.vo.RegisterVo;
 import com.hezhu.educenter.service.UcenterMemberService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,6 +55,34 @@ public class UcenterMemberController {
         UcenterMember member = memberService.getById(memberId);
         return R.ok().data("userInfo", member);
     }
+
+    //4.根据用户id查询用户信息
+    @PostMapping("/getMemberInfoById/{memberId}")
+    public UcenterMemberVo getMemberInfoById(@PathVariable String memberId) {
+        UcenterMember member = memberService.getById(memberId);
+        UcenterMemberVo memberVo = new UcenterMemberVo();
+        BeanUtils.copyProperties(member, memberVo);
+
+        return memberVo;
+    }
+
+    //5.service_order：根据用户id，获取全部用户信息
+    @PostMapping("getUserInfoOrder/{id}")
+    public UcenterMemberOrder getUserInfoOrder(@PathVariable String id) {
+        UcenterMember member = memberService.getById(id);
+        UcenterMemberOrder ucenterMemberOrder = new UcenterMemberOrder();
+        BeanUtils.copyProperties(member, ucenterMemberOrder);
+
+        return ucenterMemberOrder;
+    }
+
+    //6.后台统计：查询某一天的注册人数
+    @GetMapping("countRegister/{day}")
+    public R countRegister(@PathVariable String day) {
+        Integer count = memberService.countRegisterDay(day);
+        return R.ok().data("countRegister", count);
+    }
+
 }
 
 
