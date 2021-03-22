@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/eduservice/video")
-@CrossOrigin
+//@CrossOrigin
 public class VideoController {
     @Autowired
     private VideoService videoService;

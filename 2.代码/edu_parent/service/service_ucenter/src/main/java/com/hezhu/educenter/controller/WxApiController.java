@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 @RequestMapping("/api/ucenter/wx")
 @Controller //不需要返回数据，只请求数据
-@CrossOrigin
+//@CrossOrigin
 public class WxApiController {
 
     @Autowired
@@ -51,7 +51,7 @@ public class WxApiController {
                 baseUrl,
                 ConstantWxUtils.WX_OPEN_APP_ID,
                 redirectUrl,
-                "atguigu");
+                "hezhu");
 
         //重定向到：请求微信地址
         return "redirect:" + qrcodeUrl;

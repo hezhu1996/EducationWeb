@@ -2216,3 +2216,73 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 },Server stats: [[Server:192.168.0.81:8007;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 EST 1969;	First connection made: Wed Dec 31 19:00:00 EST 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
 ]}ServerList:org.springframework.cloud.alibaba.nacos.ribbon.NacosServerList@1ce792b0
 2021-03-17 07:21:52.075 [PollingServerListUpdater-0] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: service-order.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-20 09:41:18.977 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-03-20 09:41:19.662 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-20 09:41:19.663 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-03-20 09:41:19.690 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2021-03-20 09:41:19.832 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=cde525ce-0b2a-3f0d-b6ee-c75d8b65bb07
+2021-03-20 09:41:19.896 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-20 09:41:19.920 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.hezhu.servicebase.RedisConfig$$EnhancerBySpringCGLIB$$f525bd02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-20 09:41:19.939 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-20 09:41:20.083 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-03-20 09:41:20.089 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-03-20 09:41:20.089 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-20 09:41:20.089 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-20 09:41:20.184 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-20 09:41:20.184 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1196 ms
+2021-03-20 09:41:20.341 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-20 09:41:20.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-20 09:41:21.157 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-20 09:41:21.170 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-20 09:41:21.172 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-20 09:41:21.247 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 09:41:21.538 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-03-20 09:41:21.830 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-20 09:41:21.840 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-20 09:41:21.859 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-20 09:41:22.071 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2021-03-20 09:41:22.089 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2021-03-20 09:41:22.095 [main] INFO  o.s.c.alibaba.nacos.registry.NacosServiceRegistry - nacos registry, service-edu 192.168.0.81:8001 register finished
+2021-03-20 09:41:22.210 [main] INFO  com.hezhu.edu.EduApplication - Started EduApplication in 4.024 seconds (JVM running for 4.52)
+2021-03-20 09:41:28.899 [http-nio-8001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 09:41:28.900 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-20 09:41:28.904 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2021-03-21 08:18:40.046 [main] INFO  com.hezhu.edu.EduApplication - The following profiles are active: dev
+2021-03-21 08:18:40.621 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-21 08:18:40.622 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-03-21 08:18:40.642 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2021-03-21 08:18:40.783 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=cde525ce-0b2a-3f0d-b6ee-c75d8b65bb07
+2021-03-21 08:18:40.845 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 08:18:40.870 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.hezhu.servicebase.RedisConfig$$EnhancerBySpringCGLIB$$49697d58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 08:18:40.890 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-21 08:18:41.033 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2021-03-21 08:18:41.039 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2021-03-21 08:18:41.039 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-21 08:18:41.039 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-21 08:18:41.138 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-21 08:18:41.138 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1079 ms
+2021-03-21 08:18:41.288 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-03-21 08:18:41.359 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-03-21 08:18:42.143 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-21 08:18:42.157 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-21 08:18:42.159 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-03-21 08:18:42.230 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 08:18:42.538 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-03-21 08:18:42.853 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-21 08:18:42.865 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-21 08:18:42.887 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-21 08:18:43.109 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2021-03-21 08:18:43.129 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2021-03-21 08:18:43.136 [main] INFO  o.s.c.alibaba.nacos.registry.NacosServiceRegistry - nacos registry, service-edu 192.168.0.81:8001 register finished
+2021-03-21 08:18:43.254 [main] INFO  com.hezhu.edu.EduApplication - Started EduApplication in 4.182 seconds (JVM running for 4.757)
+2021-03-21 08:18:56.701 [http-nio-8001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 08:18:56.701 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-03-21 08:18:56.705 [http-nio-8001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-03-21 14:41:04.859 [hystrix-service-order-1] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: service-order.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-21 14:41:04.872 [hystrix-service-order-1] INFO  com.netflix.loadbalancer.BaseLoadBalancer - Client: service-order instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=service-order,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-03-21 14:41:04.884 [hystrix-service-order-1] INFO  c.n.loadbalancer.DynamicServerListLoadBalancer - Using serverListUpdater PollingServerListUpdater
+2021-03-21 14:41:04.897 [hystrix-service-order-1] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: service-order.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-03-21 14:41:04.902 [hystrix-service-order-1] INFO  c.n.loadbalancer.DynamicServerListLoadBalancer - DynamicServerListLoadBalancer for client service-order initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=service-order,current list of Servers=[192.168.0.81:8007],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.0.81:8007;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 EST 1969;	First connection made: Wed Dec 31 19:00:00 EST 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.alibaba.nacos.ribbon.NacosServerList@6946cee6
+2021-03-21 14:41:05.888 [PollingServerListUpdater-0] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: service-order.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647

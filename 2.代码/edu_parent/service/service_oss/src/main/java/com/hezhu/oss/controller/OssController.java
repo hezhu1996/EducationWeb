@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController //交给spring管理，返回json值
 @RequestMapping("/eduoss/fileoss")
-@CrossOrigin
+//@CrossOrigin
 public class OssController {
 
     @Autowired

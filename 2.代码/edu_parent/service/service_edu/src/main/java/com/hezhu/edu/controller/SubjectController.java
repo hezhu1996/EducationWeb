@@ -25,7 +25,7 @@ import java.util.List;
 @Api("课程分类管理") //swagger 名称
 @RestController
 @RequestMapping("/eduservice/subject")
-@CrossOrigin
+//@CrossOrigin
 public class SubjectController {
 
     @Autowired

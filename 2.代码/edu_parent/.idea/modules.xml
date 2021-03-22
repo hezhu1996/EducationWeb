@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/edu_parent.iml" filepath="$PROJECT_DIR$/edu_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/infrastructure/infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_acl/service_acl.iml" filepath="$PROJECT_DIR$/service/service_acl/service_acl.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/service_base/service_base.iml" filepath="$PROJECT_DIR$/common/service_base/service_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service_cms/service_cms.iml" filepath="$PROJECT_DIR$/service/service_cms/service_cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service_edu/service_edu.iml" filepath="$PROJECT_DIR$/service/service_edu/service_edu.iml" />
@@ -17,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/service/service_statistics/service_statistics.iml" filepath="$PROJECT_DIR$/service/service_statistics/service_statistics.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service_ucenter/service_ucenter.iml" filepath="$PROJECT_DIR$/service/service_ucenter/service_ucenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service_vod/service_vod.iml" filepath="$PROJECT_DIR$/service/service_vod/service_vod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/spring_security/spring_security.iml" filepath="$PROJECT_DIR$/common/spring_security/spring_security.iml" />
     </modules>
   </component>
 </project>

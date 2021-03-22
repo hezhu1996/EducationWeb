@@ -2,7 +2,7 @@
   
   <div>
     <!-- 幻灯片 开始 -->
-    <div v-swiper:mySwiper="swiperOption" style="height: 1000px">
+    <div v-swiper:mySwiper="swiperOption" style="height: 500px">
         <div class="swiper-wrapper">
 
             <!-- 遍历 -->
@@ -26,7 +26,7 @@
         <section class="container">
           <header class="comm-title">
             <h2 class="tac">
-              <span class="c-333">热门课程</span>
+              <span class="c-333">热门影片</span>
             </h2>
           </header>
           <div>
@@ -42,11 +42,11 @@
                         :alt="course.title"
                       >
                       <div class="cc-mask">
-                        <a href="#" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                        <a :href="'/course/'+course.id" title="开始放映" class="comm-btn c-btn-1">开始放映</a>
                       </div>
                     </section>
                     <h3 class="hLh30 txtOf mt10">
-                      <a href="#" :title="course.title" class="course-title fsize18 c-333">{{course.title}}</a>
+                      <a :href="'/course/'+course.id" :title="course.title" class="course-title fsize18 c-333">{{course.title}}</a>
                     </h3>
                     <section class="mt10 hLh20 of">
                       <!-- v-if：判断是否免费，Number():根据数字判断 -->
@@ -66,7 +66,7 @@
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
-              <a href="#" title="全部课程" class="comm-btn c-btn-2">全部课程</a>
+              <a :href="'/course'" title="全部影片" class="comm-btn c-btn-2">全部影片</a>
             </section>
           </div>
         </section>
