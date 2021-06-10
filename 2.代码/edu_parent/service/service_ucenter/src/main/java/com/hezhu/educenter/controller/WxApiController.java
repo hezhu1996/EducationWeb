@@ -129,7 +129,7 @@ public class WxApiController {
 
             //11.返回首页面
             //通过路径传递token
-            return "redirect:http://localhost:3000?token="+jwtToken;
+            return "redirect:http://47.94.174.79:3000?token="+jwtToken;
 
         } catch (Exception e) {
             throw new HeZhuException(20001, "微信登录失败");

@@ -31,7 +31,7 @@
       <div class="more-sign">
         <h6>社交帐号登录</h6>
         <ul>
-          <li><a id="weixin" class="weixin" target="_blank" href="http://localhost:8150/api/ucenter/wx/login"><i class="iconfont icon-weixin"/></a></li>
+          <li><a id="weixin" class="weixin" target="_blank" href="http://47.94.174.79:8150/api/ucenter/wx/login"><i class="iconfont icon-weixin"/></a></li>
           <li><a id="qq" class="qq" target="_blank" href="#"><i class="iconfont icon-qq"/></a></li>
         </ul>
       </div>
@@ -70,14 +70,14 @@
               if(response.data.success){
                 //第二步：获取token字符串，并放到cookie中
                 //参数1：cookie名称；参数2：参数值；参数3：作用范围
-                cookie.set('guli_token', response.data.data.token, { domain: 'localhost' })
+                cookie.set('guli_token', response.data.data.token)
 
                 //第四步：调用api，根据token获取用户信息，为了首页面显示
                 loginApi.getLoginInfo().then(response => {
-                  //得到用户完整信息  
+                  //得到用户完整信息
                   this.loginInfo = response.data.data.userInfo
                   //将用户信息记录到cookie
-                  cookie.set('guli_ucenter', this.loginInfo, { domain: 'localhost' })
+                  cookie.set('guli_ucenter', this.loginInfo)
                   //跳转页面
                   window.location.href = "/";
                 })

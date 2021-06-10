@@ -7,8 +7,8 @@
          <el-input v-model="searchObj.username" placeholder="用户名"/>
       </el-form-item>
 
-      <el-button type="primary" icon="el-icon-search" @click="fetchData()">查询</el-button>
-      <el-button type="default" @click="resetData()">清空</el-button>
+      <el-button type="primary" icon="el-icon-search" @click="fetchData()">Search</el-button>
+      <el-button type="default" @click="resetData()">Clear</el-button>
     </el-form>
 
     <!-- 工具条 -->
@@ -31,7 +31,7 @@
         width="55" />
 
       <el-table-column
-        label="序号"
+        label="serial number"
         width="70"
         align="center">
         <template slot-scope="scope">
@@ -39,13 +39,13 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="username" label="用户名" width="150" />
+      <el-table-column prop="username" label="UserName" width="150" />
 
-      <el-table-column prop="nickName" label="用户昵称" />
+      <el-table-column prop="nickName" label="NickName" />
 
-      <el-table-column prop="gmtCreate" label="创建时间" width="180"/>
+      <el-table-column prop="gmtCreate" label="Creation Time" width="180"/>
 
-      <el-table-column label="操作" width="230" align="center">
+      <el-table-column label="Operation" width="230" align="center">
         <template slot-scope="scope">
           <router-link :to="'/acl/user/role/'+scope.row.id">
             <el-button type="info" size="mini" icon="el-icon-info" v-if="hasPerm('user.assgin')"></el-button>

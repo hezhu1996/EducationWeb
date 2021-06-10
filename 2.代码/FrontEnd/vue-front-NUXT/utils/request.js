@@ -5,7 +5,7 @@ import { MessageBox, Message } from 'element-ui'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://localhost:8222', // api的base_url
+  baseURL: 'http://47.94.174.79:8222', // api的base_url
   timeout: 20000 // 请求超时时间
 })
 
@@ -27,6 +27,7 @@ service.interceptors.request.use(
 // http response 拦截器
 service.interceptors.response.use(
   response => {
+    console.log(response)
     //debugger
     if (response.data.code == 28004) {
         console.log("response.data.resultCode是28004")

@@ -4,19 +4,19 @@
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">全部课程</span>
+          <span class="c-333">All movies</span>
         </h2>
       </header>
       <section class="c-sort-box">
         <section class="c-s-dl">
           <dl>
             <dt>
-              <span class="c-999 fsize14">课程类别</span>
+              <span class="c-999 fsize14">Category</span>
             </dt>
             <dd class="c-s-dl-li">
               <ul class="clearfix">
                 <li>
-                  <a title="全部" href="#">全部</a>
+                  <a title="全部" href="#">All</a>
                 </li>
                 <!-- 遍历一级分类 -->
                 <!-- item从1开始，索引index从0开始 -->
@@ -53,17 +53,17 @@
           <section class="fl">
             <ol class="js-tap clearfix">
               <li :class="{'current bg-orange':buyCountSort!=''}">
-                <a title="销量" href="javascript:void(0);" @click="searchBuyCount()">销量
+                <a title="销量" href="javascript:void(0);" @click="searchBuyCount()">Sales
                 <span :class="{hide:buyCountSort==''}">↓</span>
                 </a>
               </li>
               <li :class="{'current bg-orange':gmtCreateSort!=''}">
-                <a title="最新" href="javascript:void(0);" @click="searchGmtCreate()">最新
+                <a title="最新" href="javascript:void(0);" @click="searchGmtCreate()">Newest
                 <span :class="{hide:gmtCreateSort==''}">↓</span>
                 </a>
               </li>
               <li :class="{'current bg-orange':priceSort!=''}">
-                <a title="价格" href="javascript:void(0);" @click="searchPrice()">价格&nbsp;
+                <a title="价格" href="javascript:void(0);" @click="searchPrice()">Price&nbsp;
                   <span :class="{hide:priceSort==''}">↓</span>
                 </a>
               </li>
@@ -88,7 +88,7 @@
                   <section class="course-img">
                     <img :src="item.cover" class="img-responsive" alt="听力口语">
                     <div class="cc-mask">
-                      <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">Start Movie</a>
                     </div>
                   </section>
                   <!--  -->
@@ -98,13 +98,13 @@
                   <!--  -->
                   <section class="mt10 hLh20 of">
                     <span class="fr jgTag bg-green" v-if="Number(item.price) == 0">
-                      <i class="c-fff fsize12 f-fA">免费</i>
+                      <i class="c-fff fsize12 f-fA">FREE</i>
                     </span>
-                    <span class="fl jgAttr c-ccc f-fA">
+                    <!-- <span class="fl jgAttr c-ccc f-fA">
                       <i class="c-999 f-fA">9634人学习</i>
                       |
                       <i class="c-999 f-fA">9634评论</i>
-                    </span>
+                    </span> -->
                   </section>
                 </div>
               </li>
@@ -121,7 +121,7 @@
               :class="{undisable: !data.hasPrevious}"
               href="#"
               title="首页"
-              @click.prevent="gotoPage(1)">首页</a> <!-- prevent：阻止默认事件 -->
+              @click.prevent="gotoPage(1)">First</a> <!-- prevent：阻止默认事件 -->
             <a
               :class="{undisable: !data.hasPrevious}"
               href="#"
@@ -146,7 +146,7 @@
               :class="{undisable: !data.hasNext}"
               href="#"
               title="末页"
-              @click.prevent="gotoPage(data.pages)">末页</a>
+              @click.prevent="gotoPage(data.pages)">Last</a>
             <div class="clear"/>
           </div>
         </div>

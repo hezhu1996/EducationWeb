@@ -2,17 +2,17 @@
 
   <div class="app-container">
 
-    <h2 style="text-align: center;">发布新课程</h2>
+    <h2 style="text-align: center;">Publish New Movie</h2>
 
     <el-steps :active="2" process-status="wait" align-center style="margin-bottom: 40px;">
-      <el-step title="填写课程基本信息"/>
-      <el-step title="创建课程大纲"/>
-      <el-step title="最终发布"/>
+      <el-step title="Edit Movie Info"/>
+      <el-step title="Create Episode"/>
+      <el-step title="Publish"/>
     </el-steps>
 
     <el-form label-width="120px">
         <!-- 添加按钮 -->
-        <el-button type="text" @click="openChapterDialog">添加章节</el-button>
+        <el-button type="text" @click="openChapterDialog">Insert Season</el-button>
 
         <!-- 遍历章节 -->
         <ul class="chanpterList">
@@ -23,9 +23,9 @@
                     {{ chapter.title }}
 
                     <span class="acts">
-                        <el-button type="text" @click="openVideo(chapter.id)">添加小节</el-button>
-                        <el-button style="" type="text" @click="openEditChapter(chapter.id)">编辑</el-button>
-                        <el-button type="text" @click="removeChapter(chapter.id)">删除</el-button>
+                        <el-button type="text" @click="openVideo(chapter.id)">Insert Episode</el-button>
+                        <el-button style="" type="text" @click="openEditChapter(chapter.id)">Edit</el-button>
+                        <el-button type="text" @click="removeChapter(chapter.id)">Delete</el-button>
                     </span>
                 </p>
 
@@ -36,8 +36,8 @@
                         :key="video.id">
                         <p>{{ video.title }}
                             <span class="acts">
-                                <el-button type="text" @click="openEditVideo(video.id)">编辑</el-button>
-                                <el-button type="text" @click="removeVideo(video.id)">删除</el-button>
+                                <el-button type="text" @click="openEditVideo(video.id)">Edit</el-button>
+                                <el-button type="text" @click="removeVideo(video.id)">Delete</el-button>
                             </span>
                         </p>
                     </li>
@@ -45,44 +45,44 @@
             </li>
         </ul>
         <div>
-            <el-button @click="previous">上一步</el-button>
-            <el-button :disabled="saveBtnDisabled" type="primary" @click="next">下一步</el-button>
+            <el-button @click="previous">Previous</el-button>
+            <el-button :disabled="saveBtnDisabled" type="primary" @click="next">Next</el-button>
         </div>
     </el-form>
 
     <!-- 弹窗：添加和修改"章节"表单 -->
-    <el-dialog :visible.sync="dialogChapterFormVisible" title="添加章节">
+    <el-dialog :visible.sync="dialogChapterFormVisible" title="Insert Season">
         <el-form :model="chapter" label-width="120px">
-            <el-form-item label="章节标题">
+            <el-form-item label="Season Title">
                 <el-input v-model="chapter.title"/>
             </el-form-item>
-            <el-form-item label="章节排序">
+            <el-form-item label="Season Sort">
                 <el-input-number v-model="chapter.sort" :min="0" controls-position="right"/>
             </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-            <el-button @click="dialogChapterFormVisible = false">取 消</el-button>
-            <el-button type="primary" @click="saveOrUpdate">确 定</el-button>
+            <el-button @click="dialogChapterFormVisible = false">Cancel</el-button>
+            <el-button type="primary" @click="saveOrUpdate">Confirm</el-button>
         </div>
     </el-dialog>
 
     <!-- 添加和修改 小节 表单 -->
-    <el-dialog :visible.sync="dialogVideoFormVisible" title="添加课时">
+    <el-dialog :visible.sync="dialogVideoFormVisible" title="Insert Episode">
     <el-form :model="video" label-width="120px">
-        <el-form-item label="课时标题">
+        <el-form-item label="Episode Title">
         <el-input v-model="video.title"/>
         </el-form-item>
-        <el-form-item label="课时排序">
+        <el-form-item label="Episode Sort">
         <el-input-number v-model="video.sort" :min="0" controls-position="right"/>
         </el-form-item>
-        <el-form-item label="是否免费">
+        <el-form-item label="Free or not">
         <el-radio-group v-model="video.isFree">
             <el-radio :label="true">免费</el-radio>
             <el-radio :label="false">默认</el-radio>
         </el-radio-group>
         </el-form-item> 
         <!-- 上传视频 -->
-        <el-form-item label="上传视频">
+        <el-form-item label="Upload Movie">
             <el-upload
                 :on-success="handleVodUploadSuccess"
                 :on-remove="handleVodRemove"
@@ -92,7 +92,7 @@
                 :action="BASE_API+'/eduvod/video/uploadAliyunVideo'"
                 :limit="1"
                 class="upload-demo">
-            <el-button size="small" type="primary">上传视频</el-button>
+            <el-button size="small" type="primary">Upload Video</el-button>
             <el-tooltip placement="right-end">
                 <div slot="content">最大支持1G，<br>
                     支持3GP、ASF、AVI、DAT、DV、FLV、F4V、<br>
@@ -106,8 +106,8 @@
 
     </el-form>
     <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogVideoFormVisible = false">取 消</el-button>
-        <el-button :disabled="saveVideoBtnDisabled" type="primary" @click="saveOrUpdateVideo">确 定</el-button>
+        <el-button @click="dialogVideoFormVisible = false">Cancel</el-button>
+        <el-button :disabled="saveVideoBtnDisabled" type="primary" @click="saveOrUpdateVideo">Confirm</el-button>
     </div>
     </el-dialog>
 

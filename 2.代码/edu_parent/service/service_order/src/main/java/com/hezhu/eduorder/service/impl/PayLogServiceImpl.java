@@ -50,7 +50,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
             m.put("body", order.getCourseTitle()); //课程标题
             m.put("out_trade_no", orderNo); //订单号
             m.put("total_fee", order.getTotalFee().multiply(new BigDecimal("100")).longValue()+"");
-            m.put("spbill_create_ip", "127.0.0.1");
+            m.put("spbill_create_ip", "47.94.174.79");
             m.put("notify_url", "http://guli.shop/api/order/weixinPay/weixinNotify\n");
             m.put("trade_type", "NATIVE");
 

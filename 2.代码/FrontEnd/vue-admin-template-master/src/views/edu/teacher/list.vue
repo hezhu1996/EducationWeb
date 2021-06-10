@@ -3,21 +3,21 @@
     <!--查询表单-->
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
-        <el-input v-model="teacherQuery.name" placeholder="讲师名"/>
+        <el-input v-model="teacherQuery.name" placeholder="Artist Name"/>
       </el-form-item>
 
       <el-form-item>
-        <el-select v-model="teacherQuery.level" clearable placeholder="讲师头衔">
-          <el-option :value="1" label="高级讲师"/>
-          <el-option :value="2" label="首席讲师"/>
+        <el-select v-model="teacherQuery.level" clearable placeholder="Artist ♀Gender♂">
+          <el-option :value="1" label="Acter"/>
+          <el-option :value="2" label="Actress"/>
         </el-select>
       </el-form-item>
 
-      <el-form-item label="添加时间">
+      <el-form-item label="Creation Time">
         <el-date-picker
           v-model="teacherQuery.begin"
           type="datetime"
-          placeholder="选择开始时间"
+          placeholder="Start Date"
           value-format="yyyy-MM-dd HH:mm:ss"
           default-time="00:00:00"
         />
@@ -26,14 +26,14 @@
         <el-date-picker
           v-model="teacherQuery.end"
           type="datetime"
-          placeholder="选择截止时间"
+          placeholder="End Date"
           value-format="yyyy-MM-dd HH:mm:ss"
           default-time="00:00:00"
         />
       </el-form-item>
 
-      <el-button type="primary" icon="el-icon-search" @click="getList()">查询</el-button>
-      <el-button type="default" @click="resetData()">清空</el-button>
+      <el-button type="primary" icon="el-icon-search" @click="getList()">Search</el-button>
+      <el-button type="default" @click="resetData()">Clear</el-button>
     </el-form>
 
 
@@ -46,7 +46,7 @@
       highlight-current-row>
 
       <el-table-column
-        label="序号"
+        label="Serial Number"
         width="70"
         align="center">
         <template slot-scope="scope">
@@ -54,26 +54,26 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="name" label="名称" width="80" />
+      <el-table-column prop="name" label="Name" width="80" />
 
-      <el-table-column label="头衔" width="80">
+      <el-table-column label="Gender" width="80">
         <template slot-scope="scope">
-          {{ scope.row.level===1?'高级讲师':'首席讲师' }}
+          {{ scope.row.level===1?'Acter':'Actress' }}
         </template>
       </el-table-column>
 
-      <el-table-column prop="intro" label="资历" />
+      <el-table-column prop="intro" label="Intro" />
 
-      <el-table-column prop="gmtCreate" label="添加时间" width="160"/>
+      <el-table-column prop="gmtCreate" label="Creation time" width="160"/>
 
-      <el-table-column prop="sort" label="排序" width="60" />
+      <el-table-column prop="sort" label="Sort" width="60" />
 
-      <el-table-column label="操作" width="200" align="center">
+      <el-table-column label="Operation" width="200" align="center">
         <template slot-scope="scope">
           <router-link :to="'/teacher/edit/'+scope.row.id">
-            <el-button type="primary" size="mini" icon="el-icon-edit">修改</el-button>
+            <el-button type="primary" size="mini" icon="el-icon-edit">Modify</el-button>
           </router-link>
-          <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">删除</el-button>
+          <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">Delete</el-button>
         </template>
       </el-table-column>
     </el-table>

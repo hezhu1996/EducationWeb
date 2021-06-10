@@ -12,6 +12,7 @@
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>service_edu</module>
         <module>service_oss</module>
         <module>service_vod</module>
         <module>service_cms</module>
@@ -141,7 +142,21 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+
+            <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <filtering>true</filtering>
+        </resource>
         </resources>
+
+
+
+
+
+
     </build>
 
 

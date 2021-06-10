@@ -1,0 +1,5 @@
+com\hezhu\gateway\config\CorsConfig.class
+com\hezhu\gateway\handler\JsonExceptionHandler.class
+com\hezhu\gateway\handler\ErrorHandlerConfig.class
+com\hezhu\gateway\filter\AuthGlobalFilter.class
+com\hezhu\gateway\ApiGatewayApplication.class

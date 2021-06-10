@@ -1,15 +1,15 @@
 <template>
   <div class="app-container">
     <el-form ref="user" :model="user" :rules="validateRules" label-width="120px">
-      <el-form-item label="用户名" prop="username">
+      <el-form-item label="UserName" prop="username">
         <el-input v-model="user.username"/>
       </el-form-item>
-      <el-form-item label="用户昵称">
+      <el-form-item label="NickName">
         <el-input v-model="user.nickName"/>
       </el-form-item>
      
       <!-- <el-form-item v-if="!user.id" label="用户密码" prop="password"> -->
-      <el-form-item label="用户密码" prop="password">
+      <el-form-item label="Password" prop="password">
         <el-input v-model="user.password"/>
       </el-form-item>
 

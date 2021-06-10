@@ -1,38 +1,38 @@
 <template>
   <div class="app-container">
 
-    讲师添加
+    Artist Insertion
     <el-form label-width="120px">
-      <el-form-item label="讲师名称">
+      <el-form-item label="Artist Name">
         <el-input v-model="teacher.name"/>
       </el-form-item>
-      <el-form-item label="讲师排序">
+      <el-form-item label="Sort">
         <el-input-number v-model="teacher.sort" controls-position="right" :min="0"/>
       </el-form-item>
-      <el-form-item label="讲师头衔">
-        <el-select v-model="teacher.level" clearable placeholder="请选择">
+      <el-form-item label="Title">
+        <el-select v-model="teacher.level" clearable placeholder="Choose Here">
           <!--
             数据类型一定要和取出的json中的一致，否则没法回填
             因此，这里value使用动态绑定的值，保证其数据类型是number
           -->
-          <el-option :value="1" label="高级讲师"/>
-          <el-option :value="2" label="首席讲师"/>
+          <el-option :value="1" label="Acter"/>
+          <el-option :value="2" label="Actress"/>
         </el-select>
       </el-form-item>
-      <el-form-item label="讲师资历">
+      <el-form-item label="Intro">
         <el-input v-model="teacher.career"/>
       </el-form-item>
-      <el-form-item label="讲师简介">
+      <el-form-item label="Detail">
         <el-input v-model="teacher.intro" :rows="10" type="textarea"/>
       </el-form-item>
 
       <!-- 讲师头像：TODO -->
-      <el-form-item label="讲师头像">
+      <el-form-item label="Avatar">
 
           <!-- 头衔缩略图 -->
           <pan-thumb :image="teacher.avatar"/>
           <!-- 文件上传按钮 -->
-          <el-button type="primary" icon="el-icon-upload" @click="imagecropperShow=true">更换头像
+          <el-button type="primary" icon="el-icon-upload" @click="imagecropperShow=true"> Modify Avatar
           </el-button>
 
           <!--
@@ -54,7 +54,7 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button :disabled="saveBtnDisabled" type="primary" @click="saveOrUpdate">保存</el-button>
+        <el-button :disabled="saveBtnDisabled" type="primary" @click="saveOrUpdate">Save</el-button>
       </el-form-item>
     </el-form>
 

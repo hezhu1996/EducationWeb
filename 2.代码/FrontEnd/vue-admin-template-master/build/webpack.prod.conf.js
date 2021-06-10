@@ -34,6 +34,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
+    publicPath:'./',
     filename: utils.assetsPath('js/[name].[chunkhash:8].js'),
     chunkFilename: utils.assetsPath('js/[name].[chunkhash:8].js')
   },
@@ -56,6 +57,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       inject: true,
       favicon: resolve('favicon.ico'),
       title: 'vue-admin-template',
+
+      
+      // HeZhu
+      templateParameters: {
+        BASE_URL: config.build.assetsPublicPath + config.build.assetsSubDirectory
+      },
+
+
       minify: {
         removeComments: true,
         collapseWhitespace: true,

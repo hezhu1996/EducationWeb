@@ -2,28 +2,28 @@
 
   <div class="app-container">
 
-    <h2 style="text-align: center;">发布新课程</h2>
+    <h2 style="text-align: center;">Publish New Movie</h2>
 
     <el-steps :active="3" process-status="wait" align-center style="margin-bottom: 40px;">
-      <el-step title="填写课程基本信息"/>
-      <el-step title="创建课程大纲"/>
-      <el-step title="发布课程"/>
+      <el-step title="Edit Movie Info"/>
+      <el-step title="Create Episode"/>
+      <el-step title="Publish"/>
     </el-steps>
 
     <div class="ccInfo">
       <img :src="coursePublish.cover">
       <div class="main">
         <h2>{{ coursePublish.title }}</h2>
-        <p class="gray"><span>共{{ coursePublish.lessonNum }}课时</span></p>
-        <p><span>所属分类：{{ coursePublish.subjectLevelOne }} — {{ coursePublish.subjectLevelTwo }}</span></p>
-        <p>课程讲师：{{ coursePublish.teacherName }}</p>
-        <h3 class="red">￥{{ coursePublish.price }}</h3>
+        <p class="gray"><span>Total{{ coursePublish.lessonNum }}Hours</span></p>
+        <p><span>Category：{{ coursePublish.subjectLevelOne }} — {{ coursePublish.subjectLevelTwo }}</span></p>
+        <p>Artist：{{ coursePublish.teacherName }}</p>
+        <h3 class="red">CAD: {{ coursePublish.price }}</h3>
       </div>
     </div>
 
     <div>
-      <el-button @click="previous">返回修改</el-button>
-      <el-button :disabled="saveBtnDisabled" type="primary" @click="publish">发布课程</el-button>
+      <el-button @click="previous">Return to Edit</el-button>
+      <el-button :disabled="saveBtnDisabled" type="primary" @click="publish">Publish Movie</el-button>
     </div>
   </div>
 </template>

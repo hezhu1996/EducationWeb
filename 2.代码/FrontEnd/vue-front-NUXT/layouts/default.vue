@@ -4,27 +4,27 @@
     <header id="header">
       <section class="container">
         <h1 id="logo">
-          <a href="#" title="谷粒学院">
-            <img src="~/assets/img/logo.png" width="100%" alt="谷粒学院">
+          <a href="#" title="若枫若影">
+            <img src="~/assets/img/logo-maple.jpg" width="60%" height="100%" alt="若枫若影">
           </a>
         </h1>
         <div class="h-r-nsl">
           <ul class="nav">
             <router-link to="/" tag="li" active-class="current" exact>
-              <a>首页</a>
+              <a>Main</a>
             </router-link>
             <router-link to="/course" tag="li" active-class="current">
-              <a>课程</a>
+              <a>Movie</a>
             </router-link>
             <router-link to="/teacher" tag="li" active-class="current">
-              <a>名师</a>
+              <a>Artist</a>
             </router-link>
-            <router-link to="/article" tag="li" active-class="current">
+            <!-- <router-link to="/article" tag="li" active-class="current">
               <a>文章</a>
             </router-link>
             <router-link to="/qa" tag="li" active-class="current">
               <a>问答</a>
-            </router-link>
+            </router-link> -->
           </ul>
            <!-- nav:右上角登录 -->
             <ul class="h-r-login">
@@ -32,11 +32,11 @@
                 <li v-if="!loginInfo.id" id="no-login">
                     <a href="/login" title="登录">
                         <em class="icon18 login-icon">&nbsp;</em>
-                        <span class="vam ml5">登录</span>
+                        <span class="vam ml5">Login</span>
                     </a>
                     |
                     <a href="/register" title="注册">
-                        <span class="vam ml5">注册</span>
+                        <span class="vam ml5">Register</span>
                     </a>
                 </li>
                 <!-- 如果loginInfo里面有值：已登录 -->
@@ -58,14 +58,14 @@
                             >
                         <span id="userName" class="vam disIb">{{ loginInfo.nickname }}</span>
                     </a>
-                    <a href="javascript:void(0);" title="退出" @click="logout()" class="ml5">退出</a>
+                    <a href="javascript:void(0);" title="退出" @click="logout()" class="ml5">Logout</a>
                 </li>
                 <!-- /未登录显示第1 li；登录后显示第2，3 li -->
             </ul>
           <aside class="h-r-search">
             <form action="#" method="post">
               <label class="h-r-s-box">
-                <input type="text" placeholder="输入你想学的课程" name="queryCourse.courseName" value>
+                <input type="text" placeholder="Search Movie" name="queryCourse.courseName" value>
                 <button type="submit" class="s-btn">
                   <em class="icon18">&nbsp;</em>
                 </button>
@@ -87,29 +87,29 @@
     <footer id="footer">
       <section class="container">
         <div class>
-          <h4 class="hLh30">
+          <!-- <h4 class="hLh30">
             <span class="fsize18 f-fM c-999">友情链接</span>
           </h4>
           <ul class="of flink-list">
             <li>
               <a href="http://www.atguigu.com/" title="尚硅谷" target="_blank">尚硅谷</a>
             </li>
-          </ul>
-          <div class="clear"></div>
+          </ul> -->
+          <!-- <div class="clear"></div> -->
         </div>
         <div class="b-foot">
           <section class="fl col-7">
             <section class="mr20">
               <section class="b-f-link">
-                <a href="#" title="关于我们" target="_blank">关于我们</a>|
-                <a href="#" title="联系我们" target="_blank">联系我们</a>|
-                <a href="#" title="帮助中心" target="_blank">帮助中心</a>|
-                <a href="#" title="资源下载" target="_blank">资源下载</a>|
-                <span>服务热线：010-56253825(北京) 0755-85293825(深圳)</span>
-                <span>Email：info@atguigu.com</span>
+                <a href="#" title="关于我们" target="_blank">About us</a>|
+                <a href="#" title="联系我们" target="_blank">Contact us</a>|
+                <a href="#" title="帮助中心" target="_blank">Help</a>|
+                <a href="#" title="资源下载" target="_blank">Reources Download</a>|
+                <span>Tel：613-869-9690 (Auther)</span>
+                <span>Email：hezhukevin@gmail.com</span>
               </section>
               <section class="b-f-link mt10">
-                <span>©2018课程版权均归谷粒学院所有 京ICP备17055252号</span>
+                <span>©All Rights Reserved by He Zhu</span>
               </section>
             </section>
           </section>
@@ -194,8 +194,8 @@ export default {
     //2.登出
     logout(){
       //清空cookie中的值
-      cookie.set('guli_token', '', { domain: 'localhost' })
-      cookie.set('guli_ucenter', '', { domain: 'localhost' })
+      cookie.set('guli_token', '', { domain: '47.94.174.79' })
+      cookie.set('guli_ucenter', '', { domain: '47.94.174.79' })
 
       //跳转到首页面
       window.location.href='/'
@@ -204,14 +204,14 @@ export default {
     //3.微信登录显示方法
     wxLogin(){
       //1.把路径上的token放到cookie中
-      cookie.set('guli_token', this.token, { domain: 'localhost' })
-      cookie.set('guli_ucenter', '', { domain: 'localhost' })
+      cookie.set('guli_token', this.token, { domain: '47.94.174.79' })
+      cookie.set('guli_ucenter', '', { domain: '47.94.174.79' })
 
       //2.调用接口，根据token值获取用户信息(此时cookie已经放到了header中)
       loginApi.getLoginInfo()
         .then(response => {
           this.loginInfo = response.data.data.userInfo
-          cookie.set('guli_ucenter', 'this.loginInfo', { domain: 'localhost' })
+          cookie.set('guli_ucenter', 'this.loginInfo', { domain: '47.94.174.79' })
         })
     },
     

@@ -26,7 +26,7 @@
         <section class="container">
           <header class="comm-title">
             <h2 class="tac">
-              <span class="c-333">热门影片</span>
+              <span class="c-333">Hot Movie</span>
             </h2>
           </header>
           <div>
@@ -42,7 +42,7 @@
                         :alt="course.title"
                       >
                       <div class="cc-mask">
-                        <a :href="'/course/'+course.id" title="开始放映" class="comm-btn c-btn-1">开始放映</a>
+                        <a :href="'/course/'+course.id" title="开始放映" class="comm-btn c-btn-1">Start Movie</a>
                       </div>
                     </section>
                     <h3 class="hLh30 txtOf mt10">
@@ -51,13 +51,13 @@
                     <section class="mt10 hLh20 of">
                       <!-- v-if：判断是否免费，Number():根据数字判断 -->
                       <span class="fr jgTag bg-green" v-if="Number(course.price) === 0">
-                        <i class="c-fff fsize12 f-fA">免费</i>
+                        <i class="c-fff fsize12 f-fA">Free</i>
                       </span>
-                      <span class="fl jgAttr c-ccc f-fA">
+                      <!-- <span class="fl jgAttr c-ccc f-fA">
                         <i class="c-999 f-fA">9634人学习</i>
                         |
                         <i class="c-999 f-fA">9634评论</i>
-                      </span>
+                      </span> -->
                     </section>
                   </div>
                 </li>
@@ -66,7 +66,7 @@
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
-              <a :href="'/course'" title="全部影片" class="comm-btn c-btn-2">全部影片</a>
+              <a :href="'/course'" title="全部影片" class="comm-btn c-btn-2">All Movies</a>
             </section>
           </div>
         </section>
@@ -77,7 +77,7 @@
         <section class="container">
           <header class="comm-title">
             <h2 class="tac">
-              <span class="c-333">名师大咖</span>
+              <span class="c-333">Super Stars</span>
             </h2>
           </header>
           <div>
@@ -108,7 +108,7 @@
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
-              <a href="#" title="全部讲师" class="comm-btn c-btn-2">全部讲师</a>
+              <a href="/teacher" title="全部讲师" class="comm-btn c-btn-2">All Artist</a>
             </section>
           </div>
         </section>

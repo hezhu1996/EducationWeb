@@ -5,7 +5,6 @@
     <modules>
         <module>service</module>
         <module>common</module>
-        <module>service_msm</module>
         <module>infrastructure</module>
     </modules>
     <parent>

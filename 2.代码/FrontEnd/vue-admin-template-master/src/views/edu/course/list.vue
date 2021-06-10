@@ -1,21 +1,21 @@
 <template>
   <div class="app-container">
-    课程列表
+    Movie List
     <!--查询表单-->
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
-        <el-input v-model="courseQuery.title" placeholder="课程名称"/>
+        <el-input v-model="courseQuery.title" placeholder="Movie Name"/>
       </el-form-item>
 
       <el-form-item>
-        <el-select v-model="courseQuery.status" clearable placeholder="课程状态">
-          <el-option :value="'Normal'" label="已发布"/>
-          <el-option :value="'Draft'" label="未发布"/>
+        <el-select v-model="courseQuery.status" clearable placeholder="Status">
+          <el-option :value="'Normal'" label="Published"/>
+          <el-option :value="'Draft'" label="Not Published"/>
         </el-select>
       </el-form-item>
 
-      <el-button type="primary" icon="el-icon-search" @click="getList()">查询</el-button>
-      <el-button type="default" @click="resetData()">清空</el-button>
+      <el-button type="primary" icon="el-icon-search" @click="getList()">Search</el-button>
+      <el-button type="default" @click="resetData()">Clear</el-button>
     </el-form>
 
 
@@ -28,7 +28,7 @@
       highlight-current-row>
 
       <el-table-column
-        label="序号"
+        label="Serial Number"
         width="70"
         align="center">
         <template slot-scope="scope">
@@ -36,30 +36,30 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="title" label="课程名称" width="80" />
+      <el-table-column prop="title" label="Movie Name" width="80" />
 
-      <el-table-column label="课程状态" width="80">
+      <el-table-column label="Status" width="80">
         <template slot-scope="scope">
-          {{ scope.row.status==='Normal'?'已发布':'未发布' }}
+          {{ scope.row.status==='Normal'?'Published':'Not Published' }}
         </template>
       </el-table-column>
 
-      <el-table-column prop="lessonNum" label="课时数" />
+      <el-table-column prop="lessonNum" label="Hours" />
 
-      <el-table-column prop="gmtCreate" label="添加时间" width="160"/>
+      <el-table-column prop="gmtCreate" label="Insertion Date" width="160"/>
 
-      <el-table-column prop="viewCount" label="浏览数量" width="60" />
+      <el-table-column prop="viewCount" label="Watched Number" width="60" />
 
-      <el-table-column label="操作" width="200" align="center">
+      <el-table-column label="Operation" width="200" align="center">
         <template slot-scope="scope">
           <router-link :to="'/course/info/'+scope.row.id">
-            <el-button type="primary" size="mini" icon="el-icon-edit">编辑课程基本信息</el-button>
+            <el-button type="primary" size="mini" icon="el-icon-edit">Edit Basic</el-button>
           </router-link>
 
           <router-link :to="'/course/chapter/'+scope.row.id">
-            <el-button type="primary" size="mini" icon="el-icon-edit">编辑课程大纲</el-button>
+            <el-button type="primary" size="mini" icon="el-icon-edit">Edit episode</el-button>
           </router-link>
-          <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">删除</el-button>
+          <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">Delete</el-button>
         </template>
       </el-table-column>
     </el-table>

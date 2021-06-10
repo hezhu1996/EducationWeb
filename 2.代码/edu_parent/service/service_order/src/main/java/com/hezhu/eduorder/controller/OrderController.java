@@ -55,6 +55,15 @@ public class OrderController {
         wrapper.eq("member_id", memberId);
         wrapper.eq("status", 1); //支付状态，1代表已经支付
         int count = orderService.count(wrapper);
+        System.out.println("===========================================");
+        System.out.println("courseId: "+ courseId);
+
+        System.out.println("===========================================");
+        System.out.println("memberId: "+ memberId);
+
+        System.out.println("===========================================");
+        System.out.println("count: "+ count);
+
         if(count > 0){
             //已支付
             return true;

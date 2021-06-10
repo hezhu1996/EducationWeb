@@ -4,7 +4,7 @@
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">讲师介绍</span>
+          <span class="c-333">Introduction</span>
         </h2>
       </header>
       <div class="t-infor-wrap">
@@ -18,7 +18,7 @@
               <span class="fsize24 c-333">
                 {{teacher.name}}
                 &nbsp;
-                {{teacher.level === 1 ? '高级讲师':"首席讲师"}}
+                {{teacher.level === 1 ? 'Acter':"Actress"}}
                 </span>
             </h3>
             <section class="mt10">
@@ -38,7 +38,7 @@
         <div>
           <header class="comm-title all-teacher-title c-course-content">
             <h2 class="fl tac">
-              <span class="c-333">主讲课程</span>
+              <span class="c-333">Movies</span>
             </h2>
             <section class="c-tab-title">
               <a href="javascript: void(0)">&nbsp;</a>

@@ -30,7 +30,7 @@ import java.util.List;
 @RequestMapping("/eduservice/teacher")
 //@CrossOrigin
 public class TeacherController {
-    //访问地址：http://localhost:8001/edu/teacher/findAll
+    //访问地址：http://47.94.174.79:8001/edu/teacher/findAll
     //注入service
     @Autowired
     private TeacherService teacherService;

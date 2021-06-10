@@ -21,24 +21,24 @@
               <span class="c-fff fsize24">{{courseWebVo.title}}</span>
             </h2>
             <section class="c-attr-jg">
-              <span class="c-fff">价格：</span>
+              <span class="c-fff">Price：</span>
               <b class="c-yellow" style="font-size:24px;">{{courseWebVo.price}}</b>
             </section>
             <section class="c-attr-mt c-attr-undis">
-              <span class="c-fff fsize14">主讲： {{courseWebVo.teacherName}}&nbsp;&nbsp;&nbsp;</span>
+              <span class="c-fff fsize14">Artist： {{courseWebVo.teacherName}}&nbsp;&nbsp;&nbsp;</span>
             </section>
             <section class="c-attr-mt of">
               <span class="ml10 vam">
                 <em class="icon18 scIcon"></em>
-                <a class="c-fff vam" title="收藏" href="#" >收藏</a>
+                <a class="c-fff vam" title="收藏" href="#" >Collection</a>
               </span>
             </section>
             <!-- 判断是否收费观看 -->
             <section v-if="isbuy || Number(courseWebVo.price === 0)" class="c-attr-mt">
-              <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
+              <a :href="'/player/'+ chapterVideoList[0].children[0].videoSourceId" title="立即观看" class="comm-btn c-btn-3">Watch Now</a>
             </section>
             <section v-else class="c-attr-mt">
-              <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
+              <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">Buy Now</a>
             </section>
           </section>
         </aside>
@@ -47,7 +47,7 @@
             <li>
               <p>&nbsp;</p>
               <aside>
-                <span class="c-fff f-fM">购买数</span>
+                <span class="c-fff f-fM">#Sales</span>
                 <br>
                 <h6 class="c-fff f-fM mt10">{{courseWebVo.buyCount}}</h6>
               </aside>
@@ -55,7 +55,7 @@
             <li>
               <p>&nbsp;</p>
               <aside>
-                <span class="c-fff f-fM">课时数</span>
+                <span class="c-fff f-fM">Time</span>
                 <br>
                 <h6 class="c-fff f-fM mt10">{{courseWebVo.lessonNum}}</h6>
               </aside>
@@ -63,7 +63,7 @@
             <li>
               <p>&nbsp;</p>
               <aside>
-                <span class="c-fff f-fM">浏览数</span>
+                <span class="c-fff f-fM">Watched Number</span>
                 <br>
                 <h6 class="c-fff f-fM mt10">{{courseWebVo.viewCount}}</h6>
               </aside>
@@ -79,13 +79,13 @@
             <div class="i-box">
               <div>
                 <section id="c-i-tabTitle" class="c-infor-tabTitle c-tab-title">
-                  <a name="c-i" class="current" title="课程详情">课程详情</a>
+                  <a name="c-i" class="current" title="课程详情">Movie Detail</a>
                 </section>
               </div>
               <article class="ml10 mr10 pt20">
                 <div>
                   <h6 class="c-i-content c-infor-title">
-                    <span>课程介绍</span>
+                    <span>Movie Profile</span>
                   </h6>
                   <div class="course-txt-body-wrap">
                     <section class="course-txt-body">
@@ -99,7 +99,7 @@
                 <!-- /课程介绍 -->
                 <div class="mt50">
                   <h6 class="c-g-content c-infor-title">
-                    <span>课程大纲</span>
+                    <span>Episode</span>
                   </h6>
                   <section class="mt20">
                     <div class="lh-menu-wrap">
@@ -109,7 +109,7 @@
                           <!-- 章节 -->
                           <li class="lh-menu-stair" v-for="chapter in chapterVideoList" :key="chapter.id">
                             <a href="javascript: void(0)" title="第一章" class="current-1">
-                              <em class="lh-menu-i-1 icon18 mr10"></em>第一章
+                              <em class="lh-menu-i-1 icon18 mr10"></em>Chapter
                             </a>
                             
                             <ol class="lh-menu-ol" style="display: block;">
@@ -117,7 +117,7 @@
                               <li class="lh-menu-second ml30" v-for="video in chapter.children" :key="video.id">
                                 <a :href="'/player/'+video.videoSourceId" target="_blank">
                                   <span class="fr">
-                                    <i class="free-icon vam mr10">免费试听</i>
+                                    <i class="free-icon vam mr10">Free Watch</i>
                                   </span>
                                   <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>{{video.title}}
                                 </a>
@@ -138,7 +138,7 @@
           <div class="i-box">
             <div>
               <section class="c-infor-tabTitle c-tab-title">
-                <a title href="javascript:void(0)">主讲讲师</a>
+                <a title href="javascript:void(0)">Artist</a>
               </section>
               <section class="stud-act-list">
                 <ul style="height: auto;">
@@ -168,7 +168,7 @@
     <!-- 课程评论 开始 -->
     <div class="mt50 commentHtml"><div>
       <h6 class="c-c-content c-infor-title" id="i-art-comment">
-        <span class="commentTitle">课程评论</span>
+        <span class="commentTitle">Comments</span>
       </h6>
       <section class="lh-bj-list pr mt20 replyhtml">
         <ul>
@@ -179,7 +179,7 @@
             <div class="of">
               <section class="n-reply-wrap">
                 <fieldset>
-                  <textarea name="" v-model="comment.content" placeholder="输入您要评论的文字" id="commentContent"></textarea>
+                  <textarea name="" v-model="comment.content" placeholder="Type Here !" id="commentContent"></textarea>
                 </fieldset>
                 <p class="of mt5 tar pl10 pr10">
                   <span class="fl "><tt class="c-red commentContentmeg" style="display: none;"></tt></span>
@@ -201,7 +201,7 @@
                     <span class="fl"> 
                     <font class="fsize12 c-blue"> 
                       {{comment.nickname}}</font>
-                    <font class="fsize12 c-999 ml5">评论：</font></span>
+                    <font class="fsize12 c-999 ml5">Comment：</font></span>
                   </div>
                   <div class="noter-txt mt5">
                     <p>{{comment.content}}</p>

@@ -34,7 +34,7 @@ export const constantRoutes = [
     children: [{
       path: 'dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: '谷粒学院后台首页', icon: 'dashboard' }
+      meta: { title: 'Maple Movie', icon: 'dashboard' }
     }]
   }]
 /**

@@ -14,7 +14,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '在线教育平台',
+    title: '若枫若影',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -22,7 +22,7 @@
         <module name="service_ucenter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="api_gateway" target="11" />
       <module name="common" target="11" />
       <module name="common_utils" target="11" />
