@@ -94,59 +94,59 @@
 
 * shell 命令 开启 docker 容器
 
-```shell
-# api_gateway
-docker build -f Dockerfile -t api_gateway .
-docker run -p 8222:8080 --name api_gateway -it api_gateway
-docker update api_gateway --restart=always
-
-# service_edu
-docker build -f Dockerfile -t service_edu .
-docker run -p 8001:8080 --name service_edu --link mysql:mysql8 -it service_edu
-docker update service_edu --restart=always
-
-# service_oss
-docker build -f Dockerfile -t service_oss .
-docker run -p 8002:8080 --name service_oss -it service_oss
-docker update service_oss --restart=always
-
-# service_vod
-docker build -f Dockerfile -t service_vod .
-docker run -p 8003:8080 --name service_vod -it service_vod
-docker update service_vod --restart=always
-
-# service_cms
-docker build -f Dockerfile -t service_cms .
-docker run -p 8004:8080 --name service_cms --link mysql:mysql8 --link redis:redis -it service_cms
-docker update service_cms --restart=always
-
-# service_msm
-docker build -f Dockerfile -t service_msm .
-docker run -p 8005:8080 --name service_msm --link mysql:mysql8 --link redis:redis -it service_msm
-docker update service_msm --restart=always
-
-# service_order
-docker build -f Dockerfile -t service_order .
-docker run -p 8007:8080 --name service_order --link mysql:mysql8 -it service_order
-docker update service_order --restart=always
-
-# service_statistic
-docker build -f Dockerfile -t service_statistic .
-docker run -p 8008:8080 --name service_statistic --link mysql:mysql8 -it service_statistic
-docker update service_statistic --restart=always
-
-# service_ucenter
-docker build -f Dockerfile -t service_ucenter .
-docker run -p 8150:8080 --name service_ucenter --link mysql:mysql8 --link redis:redis -it service_ucenter
-docker update service_ucenter --restart=always
-
-# service_acl
-docker build -f Dockerfile -t service_acl .
-docker run -p 8009:8080 --name service_acl --link mysql:mysql8 --link redis:redis -it service_acl
-docker update service_acl --restart=always
-
-docker exec -it service_acl /bin/bash
-```
+  * ```shell
+    # api_gateway
+    docker build -f Dockerfile -t api_gateway .
+    docker run -p 8222:8080 --name api_gateway -it api_gateway
+    docker update api_gateway --restart=always
+    
+    # service_edu
+    docker build -f Dockerfile -t service_edu .
+    docker run -p 8001:8080 --name service_edu --link mysql:mysql8 -it service_edu
+    docker update service_edu --restart=always
+    
+    # service_oss
+    docker build -f Dockerfile -t service_oss .
+    docker run -p 8002:8080 --name service_oss -it service_oss
+    docker update service_oss --restart=always
+    
+    # service_vod
+    docker build -f Dockerfile -t service_vod .
+    docker run -p 8003:8080 --name service_vod -it service_vod
+    docker update service_vod --restart=always
+    
+    # service_cms
+    docker build -f Dockerfile -t service_cms .
+    docker run -p 8004:8080 --name service_cms --link mysql:mysql8 --link redis:redis -it service_cms
+    docker update service_cms --restart=always
+    
+    # service_msm
+    docker build -f Dockerfile -t service_msm .
+    docker run -p 8005:8080 --name service_msm --link mysql:mysql8 --link redis:redis -it service_msm
+    docker update service_msm --restart=always
+    
+    # service_order
+    docker build -f Dockerfile -t service_order .
+    docker run -p 8007:8080 --name service_order --link mysql:mysql8 -it service_order
+    docker update service_order --restart=always
+    
+    # service_statistic
+    docker build -f Dockerfile -t service_statistic .
+    docker run -p 8008:8080 --name service_statistic --link mysql:mysql8 -it service_statistic
+    docker update service_statistic --restart=always
+    
+    # service_ucenter
+    docker build -f Dockerfile -t service_ucenter .
+    docker run -p 8150:8080 --name service_ucenter --link mysql:mysql8 --link redis:redis -it service_ucenter
+    docker update service_ucenter --restart=always
+    
+    # service_acl
+    docker build -f Dockerfile -t service_acl .
+    docker run -p 8009:8080 --name service_acl --link mysql:mysql8 --link redis:redis -it service_acl
+    docker update service_acl --restart=always
+    
+    docker exec -it service_acl /bin/bash
+    ```
 
 ## NUXT:
 
@@ -206,7 +206,7 @@ docker exec -it service_acl /bin/bash
 
   - 单点登录需要改的地方
 
-    - ![image-20210609170514878](C:\Users\HeZhu\AppData\Roaming\Typora\typora-user-images\image-20210609170514878.png)
+    - ![image-20210609170514878](https://raw.githubusercontent.com/TWDH/Leetcode-From-Zero/pictures/img/image-20210609170514878.png)
 
   - https://www.imooc.com/article/294271
 

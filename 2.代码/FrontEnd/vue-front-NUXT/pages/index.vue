@@ -31,14 +31,17 @@
           </header>
           <div>
             <article class="comm-course-list">
-              <ul class="of" id="bna">
+              <div class="film-list" 
+              id="bna"
+              >
                 <!-- 每个热门课程 开始 -->
-                <li v-for="course in eduList" :key="course.id">
+                <div class="film-list-item" v-for="course in eduList" :key="course.id">
                   <div class="cc-l-wrap">
+                    <!-- 电影图片 -->
                     <section class="course-img">
                       <img
                         :src="course.cover"
-                        class="img-responsive"
+                        class="img-responsive img-responsive--temp"
                         :alt="course.title"
                       >
                       <div class="cc-mask">
@@ -60,9 +63,9 @@
                       </span> -->
                     </section>
                   </div>
-                </li>
+                </div>
                 <!-- 每个热门课程 结束 -->
-              </ul>
+              </div>
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
@@ -86,12 +89,12 @@
                 <li v-for="teacher in teacherList" :key="teacher.id">
                   <section class="i-teach-wrap">
                     <div class="i-teach-pic">
-                      <a href="/teacher/1" :title="teacher.name">
+                      <a :href="'/teacher/'+teacher.id" :title="teacher.name">
                         <img :alt="teacher.name" :src="teacher.avatar">
                       </a>
                     </div>
                     <div class="mt10 hLh30 txtOf tac">
-                      <a href="/teacher/1" :title="teacher.name" class="fsize18 c-666">{{teacher.name}}</a>
+                      <a :href="'/teacher/'+teacher.id" :title="teacher.name" class="fsize18 c-666">{{teacher.name}}</a>
                     </div>
                     <div class="hLh30 txtOf tac">
                       <span class="fsize14 c-999">{{teacher.career}}</span>
@@ -176,3 +179,49 @@
     },
   }
 </script>
+
+<style lang="css" scoped>
+  .film-list{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .film-list-item{
+    display: flex;
+    width:20%;
+    margin-right:1%;
+    margin-bottom:20px;
+  }
+  .img-responsive--temp{
+    height:200px;
+    width:200px !important;
+  }
+  .film-list-item:hover{
+    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  }
+  .comm-btn {
+  border: 1px solid;
+  border-radius: 16px;
+  display: inline-block;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+.cc-mask:hover{
+  text-decoration: none;
+  opacity: 0.92;
+  -moz-opacity: 0.92;
+  filter: alpha(opacity=92);
+}
+.cc-mask .c-btn-1{
+      left: 50%;
+    margin-left: -72px;
+    margin-top: -16px;
+    top: 50%;
+    transition: .3s;
+}
+
+</style>

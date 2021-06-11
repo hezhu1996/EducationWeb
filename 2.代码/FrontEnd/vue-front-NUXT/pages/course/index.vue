@@ -80,13 +80,16 @@
 
           <!-- /无数据提示 结束-->
           <article class="comm-course-list" v-if="data.total > 0">
-            <ul class="of" id="bna">
+            <ul class="film-list" id="bna">
               <!-- 遍历 -->
-              <li v-for="item in data.items" :key="item.id">
+              <div class="film-list-item" v-for="item in data.items" :key="item.id">
                 <div class="cc-l-wrap">
                   <!--  -->
                   <section class="course-img">
-                    <img :src="item.cover" class="img-responsive" alt="听力口语">
+                    <img :src="item.cover" 
+                    class="img-responsive img-responsive--temp"
+                    :alt="item.title"
+                    >
                     <div class="cc-mask">
                       <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">Start Movie</a>
                     </div>
@@ -107,7 +110,7 @@
                     </span> -->
                   </section>
                 </div>
-              </li>
+              </div>
               
             </ul>
             <div class="clear"></div>
@@ -295,4 +298,50 @@ export default {
   .show {
     display: block;
   }
+</style>
+
+<style lang="css" scoped>
+  .film-list{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .film-list-item{
+    display: flex;
+    width:20%;
+    margin-right:1%;
+    margin-bottom:20px;
+  }
+  .img-responsive--temp{
+    height:200px;
+    width:200px !important;
+  }
+  .film-list-item:hover{
+    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  }
+  .comm-btn {
+  border: 1px solid;
+  border-radius: 16px;
+  display: inline-block;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+.cc-mask:hover{
+  text-decoration: none;
+  opacity: 0.92;
+  -moz-opacity: 0.92;
+  filter: alpha(opacity=92);
+}
+.cc-mask .c-btn-1{
+      left: 50%;
+    margin-left: -72px;
+    margin-top: -16px;
+    top: 50%;
+    transition: .3s;
+}
+
 </style>

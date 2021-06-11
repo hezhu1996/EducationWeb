@@ -46,6 +46,11 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
   }
 }
 
