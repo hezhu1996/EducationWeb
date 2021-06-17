@@ -1,6 +1,6 @@
 # 部署服务（Deployment）
 
-## 启动
+## 
 
 1. nginx（不需要，SpringCloud gateway 代替）
 2. nacos

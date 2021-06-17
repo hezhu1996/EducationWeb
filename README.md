@@ -1,18 +1,24 @@
-## 技术栈
+# Online video playing System
 
-后端：Springboot + Mybatis + Vue
+## Demo:
 
-前端：Vue
+http://47.94.174.79:3000/
 
-中间件：SpringCloud (Nacos + Feign + Gateway + Hystrix) + SpringSecurity + Redis + OAuth2.0
+## Technology stack
 
+Backend：Springboot + Mybatis + Vue
 
+Frontend：Vue
 
+Middleware：SpringCloud (Nacos + Feign + Gateway + Hystrix) + SpringSecurity + Redis + OAuth2.0
 
+## Deployment on Aliyun
 
-## 后台管理系统
+[Deployment-Chinese](./Deployment.md)
 
-> 用户名：admin 密码：111111
+## Back-end Management System
+
+> Username：admin Password：111111
 
 ### 1. Auth Management
 
@@ -42,9 +48,11 @@
 
 ![Backend07](https://raw.githubusercontent.com/TWDH/Leetcode-From-Zero/pictures/img/Backend07.png)
 
-## 前台系统
+## 
 
-> 用户名：18600146610 密码：111111
+## Front Webpage
+
+> Username：18600146610 Password：111111
 
 ### 1. Main Page
 
