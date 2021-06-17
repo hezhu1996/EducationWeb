@@ -73,6 +73,3 @@ Middleware：SpringCloud (Nacos + Feign + Gateway + Hystrix) + SpringSecurity + 
 ### 5. Play the Movie
 
 ![Front5](https://raw.githubusercontent.com/TWDH/Leetcode-From-Zero/pictures/img/Front5.png)
-
-- - 
-
