@@ -1,0 +1,5 @@
+com\hezhu\servicemsm\controller\MsmController.class
+com\hezhu\servicemsm\service\MsmService.class
+com\hezhu\servicemsm\MsmApplication.class
+com\hezhu\servicemsm\service\MsmServiceImpl.class
+com\hezhu\servicemsm\utils\RandomUtil.class

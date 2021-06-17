@@ -1,0 +1,12 @@
+com\hezhu\educenter\entity\vo\RegisterVo.class
+com\hezhu\educenter\service\UcenterMemberService.class
+com\hezhu\educenter\utils\HttpClientUtils.class
+com\hezhu\educenter\controller\WxApiController.class
+com\hezhu\educenter\mapper\UcenterMemberMapper.class
+com\hezhu\educenter\utils\HttpClientUtils$2.class
+com\hezhu\educenter\controller\UcenterMemberController.class
+com\hezhu\educenter\utils\HttpClientUtils$1.class
+com\hezhu\educenter\UcenterApplication.class
+com\hezhu\educenter\utils\ConstantWxUtils.class
+com\hezhu\educenter\entity\UcenterMember.class
+com\hezhu\educenter\service\impl\UcenterMemberServiceImpl.class

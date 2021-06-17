@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-dbutils:commons-dbutils:1.7" type="repository">
+    <properties maven-id="commons-dbutils:commons-dbutils:1.7" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-dbutils/commons-dbutils/1.7/commons-dbutils-1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

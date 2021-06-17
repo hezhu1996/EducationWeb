@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hezhu.educenter.mapper.UcenterMemberMapper">
+
+    <!--6.后台统计：查询某一天的注册人数-->
+    <!-- #{参数}：这里面的参数可以在 Mapper中加入@Param("value")指定名称-->
+    <!-- 也可以通过参数"位置"来获取 #{1}-->
+    <select id="countRegisterDay" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM ucenter_member
+        WHERE DATE(gmt_create) = #{day}
+    </select>
+</mapper>
