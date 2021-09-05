@@ -65,7 +65,7 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
         // 3.放行操作
         chain.doFilter(req, res);
     }
-cfs fdt gz dat
+
     // 获取用户权限
     private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) {
         // 1.从 header 中获取 token
