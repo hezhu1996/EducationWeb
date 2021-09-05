@@ -23,9 +23,11 @@ public class PermissionHelper {
     public static List<Permission> bulid(List<Permission> treeNodes) {
         List<Permission> trees = new ArrayList<>();
         for (Permission treeNode : treeNodes) {
+            // 第二层
             if ("0".equals(treeNode.getPid())) {
                 treeNode.setLevel(1);
                 trees.add(findChildren(treeNode,treeNodes));
+                break;
             }
         }
         return trees;

@@ -41,6 +41,7 @@ public class RoleController {
             Role role) {
         Page<Role> pageParam = new Page<>(page, limit);
         QueryWrapper<Role> wrapper = new QueryWrapper<>();
+
         if(!StringUtils.isEmpty(role.getRoleName())) {
             wrapper.like("role_name",role.getRoleName());
         }

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri May 17 21:12:33 CST 2019
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1558098752948
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact error\:guli-framework-common\:pom\:unknown from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1558098753599
+https\://repo.maven.apache.org/maven2/.error=

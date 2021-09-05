@@ -1,0 +1,58 @@
+2021-03-18 07:44:54,151 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8007@DEFAULT@DEFAULT_GROUP@@service-order, region: unknown, msg: client timeout after 15000, last beat: 1616037637812
+
+2021-03-18 07:44:54,151 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8004@DEFAULT@DEFAULT_GROUP@@service-cms, region: unknown, msg: client timeout after 15000, last beat: 1616037638285
+
+2021-03-18 07:44:54,151 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8001@DEFAULT@DEFAULT_GROUP@@service-edu, region: unknown, msg: client timeout after 15000, last beat: 1616037637269
+
+2021-03-18 07:44:54,151 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8150@DEFAULT@DEFAULT_GROUP@@service-ucenter, region: unknown, msg: client timeout after 15000, last beat: 1616037636813
+
+2021-03-18 07:44:54,151 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1616037635787
+
+2021-03-18 07:44:54,154 INFO DEFAULT_GROUP@@service-ucenter {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8150:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-18 07:44:54,154 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-ucenter, ips: 
+
+2021-03-18 07:44:54,155 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-18 07:44:54,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 
+
+2021-03-18 07:44:54,155 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8007:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-18 07:44:54,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+
+2021-03-18 07:44:54,155 INFO DEFAULT_GROUP@@service-cms {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8004:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-18 07:44:54,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-cms, ips: 
+
+2021-03-18 07:44:54,155 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-18 07:44:54,155 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 
+
+2021-03-18 07:44:55,249 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 07:44:55,249 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-18 07:44:56,288 INFO DEFAULT_GROUP@@service-ucenter {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8150:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 07:44:56,288 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-ucenter, ips: 192.168.0.81:8150_true,
+
+2021-03-18 07:44:56,722 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 07:44:56,722 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-18 07:44:57,271 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8007:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 07:44:57,271 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.0.81:8007_true,
+
+2021-03-18 07:44:57,739 INFO DEFAULT_GROUP@@service-cms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 07:44:57,739 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-cms, ips: 192.168.0.81:8004_true,
+
+2021-03-18 09:31:09,953 INFO DEFAULT_GROUP@@service-statistics {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8008:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-18 09:31:09,954 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-statistics, ips: 192.168.0.81:8008_true,
+
+2021-03-18 10:47:46,934 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-statistics, ips: 192.168.0.81:8008_true,
+
+2021-03-18 10:50:02,274 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-statistics, ips: 192.168.0.81:8008_true,
+

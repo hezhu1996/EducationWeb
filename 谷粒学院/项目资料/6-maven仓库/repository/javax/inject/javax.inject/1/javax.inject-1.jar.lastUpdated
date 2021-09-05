@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Jan 12 09:28:03 CST 2019
+http\://repository.jboss.org/maven2/.lastUpdated=1547256483474
+http\://repository.jboss.org/maven2/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1484916471747
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax.inject\:javax.inject\:jar\:1 from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

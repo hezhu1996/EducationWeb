@@ -132,9 +132,11 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
             //如果是超级管理员，获取所有菜单
             selectPermissionList = baseMapper.selectList(null);
         } else {
+            //得到所有权限信息
             selectPermissionList = baseMapper.selectPermissionByUserId(userId);
         }
 
+        //递归构建权限，子节点
         List<Permission> permissionList = PermissionHelper.bulid(selectPermissionList);
         List<JSONObject> result = MemuHelper.bulid(permissionList);
 

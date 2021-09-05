@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:22 CST 2020
+plexus-archiver-3.4.jar>central=
+plexus-archiver-3.4.pom>central=
+plexus-archiver-3.4.pom>nexus-aliyun=
+plexus-archiver-3.4.jar>nexus-aliyun=

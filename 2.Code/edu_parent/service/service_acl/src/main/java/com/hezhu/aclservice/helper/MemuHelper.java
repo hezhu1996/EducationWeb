@@ -23,10 +23,12 @@ public class MemuHelper {
      * @return
      */
     public static List<JSONObject> bulid(List<Permission> treeNodes) {
+        // menus 存放所有一级菜单
         List<JSONObject> meuns = new ArrayList<>();
         if(treeNodes.size() == 1) {
+            // topNode：全部数据
             Permission topNode = treeNodes.get(0);
-            //左侧一级菜单
+            // 一级菜单
             List<Permission> oneMeunList = topNode.getChildren();
             for(Permission one :oneMeunList) {
                 JSONObject oneMeun = new JSONObject();
@@ -41,6 +43,7 @@ public class MemuHelper {
                 oneMeta.put("icon", one.getIcon());
                 oneMeun.put("meta", oneMeta);
 
+                // 一级菜单的子路由
                 List<JSONObject> children = new ArrayList<>();
                 List<Permission> twoMeunList = one.getChildren();
                 for(Permission two :twoMeunList) {

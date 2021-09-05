@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:22 CST 2020
+snappy-0.4.jar>central=
+snappy-0.4.pom>central=
+snappy-0.4.pom>nexus-aliyun=
+snappy-0.4.jar>nexus-aliyun=

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+cdi-api-1.0.jar>central=
+cdi-api-1.0.pom>central=
+cdi-api-1.0.pom>nexus-aliyun=
+cdi-api-1.0.jar>nexus-aliyun=

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 16:01:12 CST 2020
+dubbo-2.6.2.jar>central=
+dubbo-2.6.2.pom>central=
+dubbo-2.6.2.pom>nexus-aliyun=
+dubbo-2.6.2.jar>nexus-aliyun=

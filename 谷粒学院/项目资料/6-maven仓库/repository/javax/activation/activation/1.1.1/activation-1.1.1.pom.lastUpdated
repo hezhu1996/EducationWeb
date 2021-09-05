@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 07 21:24:28 CST 2019
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1551965067640
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact javax.activation\:activation\:pom\:1.1.1 from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551965068152

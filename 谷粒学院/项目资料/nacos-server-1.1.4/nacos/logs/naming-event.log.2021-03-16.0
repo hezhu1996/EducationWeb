@@ -1,0 +1,28 @@
+2021-03-16 22:12:09,178 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-16 22:12:09,183 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-16 22:12:09,236 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8007:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-16 22:12:09,236 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.0.81:8007_true,
+
+2021-03-16 22:12:14,345 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.0.81:8007_true,
+
+2021-03-16 22:18:22,401 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-16 22:18:22,401 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-16 22:19:35,270 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-16 22:43:35,808 INFO DEFAULT_GROUP@@service-cms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-16 22:43:35,808 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-cms, ips: 192.168.0.81:8004_true,
+
+2021-03-16 22:45:29,443 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-cms, ips: 192.168.0.81:8004_true,
+
+2021-03-16 22:46:13,245 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-cms, ips: 192.168.0.81:8004_true,
+
+2021-03-16 23:02:04,139 INFO DEFAULT_GROUP@@service-ucenter {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8150:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-16 23:02:04,139 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-ucenter, ips: 192.168.0.81:8150_true,
+

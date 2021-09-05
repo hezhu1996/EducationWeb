@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+jdependency-0.7.pom>nexus-aliyun=
+jdependency-0.7.jar>nexus-aliyun=
+jdependency-0.7.jar>central=
+jdependency-0.7.pom>central=

@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Feb 07 10:34:03 EST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1552027437687
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1552027436876
+http\://maven.aliyun.com/nexus/content/repositories/central/.lastUpdated=1612712043402
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact org.apache.httpcomponents\:httpcomponents-parent\:pom\:11 from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.

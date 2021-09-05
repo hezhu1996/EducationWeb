@@ -1,6 +1,0 @@
-com\hezhu\vod\VodApplication.class
-com\hezhu\vod\service\impl\VodServiceImpl.class
-com\hezhu\vod\utils\ConstantVodUtils.class
-com\hezhu\vod\controller\VodController.class
-com\hezhu\vod\utils\InitVodClient.class
-com\hezhu\vod\service\VodService.class

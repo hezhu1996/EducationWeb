@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Feb 07 10:30:55 EST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551965066730
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1551965064952
+http\://maven.aliyun.com/nexus/content/repositories/central/.lastUpdated=1612711855388
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact org.eclipse.ee4j\:project\:pom\:1.0.5 from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.

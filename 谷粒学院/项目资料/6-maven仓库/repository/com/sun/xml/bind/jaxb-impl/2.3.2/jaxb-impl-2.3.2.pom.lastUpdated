@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 07 21:24:14 CST 2019
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1551965053285
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-impl\:pom\:2.3.2 from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551965054922

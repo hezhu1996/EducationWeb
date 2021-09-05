@@ -12,12 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * <p>
  * 安全认证用户详情信息
- * </p>
- *
- * @author qy
- * @since 2019-11-08
  */
 @Data
 @Slf4j

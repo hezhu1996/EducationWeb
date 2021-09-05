@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Aug 06 15:22:45 CST 2019
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1565076165104
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact error\:edu\:pom\:unknown from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1565076165891
+https\://repo.maven.apache.org/maven2/.error=

@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jan 20 20:49:21 CST 2017
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1484916561613
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.maven.plugins\:maven-site-plugin\:jar\:3.3 from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

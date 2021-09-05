@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:18 CST 2020
+maven-reporting-api-3.0.pom>central=
+maven-reporting-api-3.0.pom>nexus-aliyun=
+maven-reporting-api-3.0.jar>nexus-aliyun=
+maven-reporting-api-3.0.jar>central=

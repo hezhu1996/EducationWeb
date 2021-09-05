@@ -1,0 +1,104 @@
+2021-03-06 07:13:57,389 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615001483150
+
+2021-03-06 07:13:57,389 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8001@DEFAULT@DEFAULT_GROUP@@service-edu, region: unknown, msg: client timeout after 15000, last beat: 1615001481194
+
+2021-03-06 07:13:57,391 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 07:13:57,391 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 
+
+2021-03-06 07:13:57,391 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 07:13:57,391 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 
+
+2021-03-06 07:13:59,047 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 07:13:59,047 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 07:14:07,093 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 07:14:07,093 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 08:14:33,033 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8001@DEFAULT@DEFAULT_GROUP@@service-edu, region: unknown, msg: client timeout after 15000, last beat: 1615036454934
+
+2021-03-06 08:14:48,041 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 08:14:48,041 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 
+
+2021-03-06 08:17:26,605 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 08:17:26,605 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 08:17:39,707 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 08:32:48,151 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 08:41:08,315 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615038052787
+
+2021-03-06 08:41:46,560 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 08:41:46,562 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 08:42:04,804 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 08:42:04,804 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 08:51:49,902 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615038694503
+
+2021-03-06 08:52:04,784 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_false,
+
+2021-03-06 08:52:09,342 INFO service: DEFAULT_GROUP@@service-vod {POS} {IP-ENABLED} valid: 192.168.0.81:8003@DEFAULT, region: unknown, msg: client beat ok
+
+2021-03-06 08:56:41,074 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 09:04:15,032 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615039435729
+
+2021-03-06 09:04:17,361 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_false,
+
+2021-03-06 09:04:21,907 INFO service: DEFAULT_GROUP@@service-vod {POS} {IP-ENABLED} valid: 192.168.0.81:8003@DEFAULT, region: unknown, msg: client beat ok
+
+2021-03-06 09:11:46,721 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 09:14:56,512 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 09:17:21,895 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 09:19:30,204 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615040351456
+
+2021-03-06 09:19:31,930 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8001@DEFAULT@DEFAULT_GROUP@@service-edu, region: unknown, msg: client timeout after 15000, last beat: 1615040351995
+
+2021-03-06 09:19:45,273 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 09:19:45,273 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 
+
+2021-03-06 09:19:46,935 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 09:19:46,935 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 
+
+2021-03-06 09:20:57,367 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 09:20:57,367 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 09:21:36,645 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 09:21:36,645 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 09:24:03,659 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 09:25:47,493 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 09:25:55,346 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8003@DEFAULT@DEFAULT_GROUP@@service-vod, region: unknown, msg: client timeout after 15000, last beat: 1615040736986
+
+2021-03-06 09:26:10,351 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-06 09:26:10,351 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 
+
+2021-03-06 09:27:22,843 INFO DEFAULT_GROUP@@service-vod {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-06 09:27:22,843 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 10:26:49,914 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+
+2021-03-06 10:26:57,881 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-06 10:44:53,645 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-vod, ips: 192.168.0.81:8003_true,
+

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Dec 17 12:01:25 CST 2019
+netty-buffer-4.1.31.Final.jar>central=
+netty-buffer-4.1.31.Final.pom>central=
+netty-buffer-4.1.31.Final.pom>nexus-aliyun=
+netty-buffer-4.1.31.Final.jar>nexus-aliyun=

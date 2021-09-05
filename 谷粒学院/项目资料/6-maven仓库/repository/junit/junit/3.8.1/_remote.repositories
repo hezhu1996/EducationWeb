@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Dec 13 09:38:33 CST 2019
+junit-3.8.1.jar>central=
+junit-3.8.1.pom>central=
+junit-3.8.1.pom>nexus-aliyun=
+junit-3.8.1.jar>nexus-aliyun=

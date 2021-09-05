@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+maven-dependency-tree-2.1.jar>central=
+maven-dependency-tree-2.1.pom>central=
+maven-dependency-tree-2.1.pom>nexus-aliyun=
+maven-dependency-tree-2.1.jar>nexus-aliyun=

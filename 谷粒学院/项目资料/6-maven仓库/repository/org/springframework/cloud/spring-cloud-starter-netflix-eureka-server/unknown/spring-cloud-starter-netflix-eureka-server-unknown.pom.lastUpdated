@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sun Jun 23 22:26:33 CST 2019
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1558273827633
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact org.springframework.cloud\:spring-cloud-starter-netflix-eureka-server\:pom\:unknown from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1561299993661
+https\://repo.maven.apache.org/maven2/.error=

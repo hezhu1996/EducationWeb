@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:00 CST 2020
+sisu-inject-bean-1.4.2.jar>central=
+sisu-inject-bean-1.4.2.pom>nexus-aliyun=
+sisu-inject-bean-1.4.2.pom>central=
+sisu-inject-bean-1.4.2.jar>nexus-aliyun=

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+maven-shade-plugin-2.2.jar>central=
+maven-shade-plugin-2.2.pom>central=
+maven-shade-plugin-2.2.pom>nexus-aliyun=
+maven-shade-plugin-2.2.jar>nexus-aliyun=

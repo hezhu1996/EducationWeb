@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Dec 11 10:15:09 CST 2019
+http\://jcenter.bintray.com/.lastUpdated=1576030509521
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1484916471494
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.javassist\:javassist\:jar\:3.18.1-GA from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

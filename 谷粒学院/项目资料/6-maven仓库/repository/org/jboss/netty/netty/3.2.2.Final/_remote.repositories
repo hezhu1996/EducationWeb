@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jan 10 22:41:41 CST 2020
+netty-3.2.2.Final.jar>central=
+netty-3.2.2.Final.pom>nexus-aliyun=
+netty-3.2.2.Final.pom>central=
+netty-3.2.2.Final.jar>nexus-aliyun=

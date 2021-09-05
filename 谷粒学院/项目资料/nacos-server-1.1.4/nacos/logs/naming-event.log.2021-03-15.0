@@ -1,0 +1,30 @@
+2021-03-15 01:45:30,876 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8007@DEFAULT@DEFAULT_GROUP@@service-order, region: unknown, msg: client timeout after 15000, last beat: 1615784529418
+
+2021-03-15 01:45:30,876 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8001@DEFAULT@DEFAULT_GROUP@@service-edu, region: unknown, msg: client timeout after 15000, last beat: 1615784527144
+
+2021-03-15 01:45:30,876 INFO {POS} {IP-DISABLED} valid: 192.168.0.81:8150@DEFAULT@DEFAULT_GROUP@@service-ucenter, region: unknown, msg: client timeout after 15000, last beat: 1615784525717
+
+2021-03-15 01:45:31,021 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-15 01:45:31,021 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 
+
+2021-03-15 01:45:31,022 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8007:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-15 01:45:31,022 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+
+2021-03-15 01:45:31,022 INFO DEFAULT_GROUP@@service-ucenter {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.81:8150:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-03-15 01:45:31,022 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-ucenter, ips: 
+
+2021-03-15 01:45:31,191 INFO DEFAULT_GROUP@@service-ucenter {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8150:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-15 01:45:31,191 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-ucenter, ips: 192.168.0.81:8150_true,
+
+2021-03-15 01:45:32,557 INFO DEFAULT_GROUP@@service-edu {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-15 01:45:32,557 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-edu, ips: 192.168.0.81:8001_true,
+
+2021-03-15 01:45:34,832 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.81:8007:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-15 01:45:34,832 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.0.81:8007_true,
+

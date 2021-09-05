@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Jan 14 23:06:04 CST 2020
+amqp-client-5.4.3.pom>nexus-aliyun=
+amqp-client-5.4.3.jar>nexus-aliyun=
+amqp-client-5.4.3.jar>central=
+amqp-client-5.4.3.pom>central=

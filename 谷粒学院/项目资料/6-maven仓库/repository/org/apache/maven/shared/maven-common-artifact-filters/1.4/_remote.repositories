@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+maven-common-artifact-filters-1.4.jar>nexus-aliyun=
+maven-common-artifact-filters-1.4.jar>central=
+maven-common-artifact-filters-1.4.pom>central=
+maven-common-artifact-filters-1.4.pom>nexus-aliyun=

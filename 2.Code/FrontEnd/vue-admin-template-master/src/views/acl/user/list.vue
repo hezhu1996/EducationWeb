@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- 查询表单 -->
-    <!--查询表单-->
+    <!-- 查询表单 -->
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
          <el-input v-model="searchObj.username" placeholder="用户名"/>

@@ -1,5 +1,0 @@
-com\hezhu\servicebase\SwaggerConfig.class
-com\hezhu\servicebase\exceptionhandler\HeZhuException.class
-com\hezhu\servicebase\RedisConfig.class
-com\hezhu\servicebase\handler\MyMetaObjectHandler.class
-com\hezhu\servicebase\exceptionhandler\GlobalExceptionHandler.class

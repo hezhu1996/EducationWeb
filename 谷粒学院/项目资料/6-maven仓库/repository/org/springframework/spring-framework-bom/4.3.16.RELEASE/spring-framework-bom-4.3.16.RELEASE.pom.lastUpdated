@@ -1,0 +1,9 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 16:01:07 CST 2020
+@default-spring-milestone-http\://repo.spring.io/milestone/.lastUpdated=1581580865660
+http\://repo.spring.io/milestone/.error=Could not transfer artifact org.springframework\:spring-framework-bom\:pom\:4.3.16.RELEASE from/to spring-milestone (http\://repo.spring.io/milestone)\: Access denied to\: http\://repo.spring.io/milestone/org/springframework/spring-framework-bom/4.3.16.RELEASE/spring-framework-bom-4.3.16.RELEASE.pom, ReasonPhrase\: Forbidden.
+https\://dl.bintray.com/rabbitmq/maven-milestones/.lastUpdated=1581580867066
+https\://repo.maven.apache.org/maven2/.lastUpdated=1581580867427
+@default-spring-snapshot-http\://repo.spring.io/snapshot/.lastUpdated=1581580866059
+http\://repo.spring.io/snapshot/.error=Could not transfer artifact org.springframework\:spring-framework-bom\:pom\:4.3.16.RELEASE from/to spring-snapshot (http\://repo.spring.io/snapshot)\: Access denied to\: http\://repo.spring.io/snapshot/org/springframework/spring-framework-bom/4.3.16.RELEASE/spring-framework-bom-4.3.16.RELEASE.pom, ReasonPhrase\: Forbidden.
+https\://dl.bintray.com/rabbitmq/maven-milestones/.error=

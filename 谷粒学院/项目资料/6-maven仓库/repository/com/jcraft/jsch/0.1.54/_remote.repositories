@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jan 13 22:30:08 CST 2020
+jsch-0.1.54.jar>central=
+jsch-0.1.54.pom>central=
+jsch-0.1.54.pom>nexus-aliyun=
+jsch-0.1.54.jar>nexus-aliyun=

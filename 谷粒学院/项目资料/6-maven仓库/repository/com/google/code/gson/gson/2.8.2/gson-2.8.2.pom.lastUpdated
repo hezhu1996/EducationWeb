@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Feb 07 10:34:27 EST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551965077232
+@default-sonatype-nexus-staging-https\://oss.sonatype.org/service/local/staging/deploy/maven2/.lastUpdated=1551965075930
+http\://maven.aliyun.com/nexus/content/repositories/central/.lastUpdated=1612712067810
+https\://oss.sonatype.org/service/local/staging/deploy/maven2/.error=Could not transfer artifact com.google.code.gson\:gson\:pom\:2.8.2 from/to sonatype-nexus-staging (https\://oss.sonatype.org/service/local/staging/deploy/maven2/)\: Not authorized , ReasonPhrase\:Unauthorized.

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+jdom-1.1.jar>nexus-aliyun=
+jdom-1.1.jar>central=
+jdom-1.1.pom>central=
+jdom-1.1.pom>nexus-aliyun=

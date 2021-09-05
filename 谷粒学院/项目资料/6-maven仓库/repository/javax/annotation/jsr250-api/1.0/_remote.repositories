@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:53 CST 2020
+jsr250-api-1.0.jar>nexus-aliyun=
+jsr250-api-1.0.jar>repository.jboss.org=
+jsr250-api-1.0.pom>repository.jboss.org=
+jsr250-api-1.0.jar>central=
+jsr250-api-1.0.pom>central=
+jsr250-api-1.0.pom>nexus-aliyun=

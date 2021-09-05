@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Feb 13 15:31:52 CST 2020
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1484916471530
+http\://maven.aliyun.com/nexus/content/groups/public/.lastUpdated=1581579112675
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact log4j\:log4j\:jar\:1.2.12 from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

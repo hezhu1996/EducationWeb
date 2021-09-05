@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sun Jan 12 15:59:54 CST 2020
+spring-boot-starter-webflux-2.0.7.RELEASE.jar>nexus-aliyun=
+spring-boot-starter-webflux-2.0.7.RELEASE.jar>central=
+spring-boot-starter-webflux-2.0.7.RELEASE.pom>central=
+spring-boot-starter-webflux-2.0.7.RELEASE.pom>nexus-aliyun=

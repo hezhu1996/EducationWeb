@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Dec 17 12:01:25 CST 2019
+lettuce-core-5.0.5.RELEASE.jar>central=
+lettuce-core-5.0.5.RELEASE.pom>central=
+lettuce-core-5.0.5.RELEASE.pom>nexus-aliyun=
+lettuce-core-5.0.5.RELEASE.jar>nexus-aliyun=

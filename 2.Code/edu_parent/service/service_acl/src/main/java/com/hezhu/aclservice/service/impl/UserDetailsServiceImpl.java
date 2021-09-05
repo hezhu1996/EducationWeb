@@ -15,12 +15,7 @@ import java.util.List;
 
 
 /**
- * <p>
  * 自定义userDetailsService - 认证用户详情
- * </p>
- *
- * @author qy
- * @since 2019-11-08
  */
 @Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -32,27 +27,26 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private PermissionService permissionService;
 
     /***
-     * 根据账号获取用户信息
-     * @param username:
-     * @return: org.springframework.security.core.userdetails.UserDetails
+     * 根据用户名获取用户信息
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // 从数据库中取出用户信息
+        // 1.从数据库中取出 <用户信息>
         User user = userService.selectByUsername(username);
 
-        // 判断用户是否存在
+        // 2.判断用户是否存在
         if (null == user){
             //throw new UsernameNotFoundException("用户名不存在！");
         }
-        // 返回UserDetails实现类
+        // 3.数据库查出的 User，对拷入 secuirty.User 中
         com.hezhu.security.entity.User curUser = new com.hezhu.security.entity.User();
         BeanUtils.copyProperties(user,curUser);
-
+        // 4.根据 User 的 Id，查询该用户权限
         List<String> authorities = permissionService.selectPermissionValueByUserId(user.getId());
+        // 5.将权限信息放入 SecurityUser ---> TokenLoginFilter 登陆成功使用，向 redis 中给当前用户写入权限
         SecurityUser securityUser = new SecurityUser(curUser);
         securityUser.setPermissionValueList(authorities);
+
         return securityUser;
     }
-
 }

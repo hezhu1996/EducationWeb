@@ -18,14 +18,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
- * <p>
  * Security配置类
- * </p>
- *
- * @author qy
- * @since 2019-11-18
  */
-@Configuration
+@Configuration // 配置类
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,6 +30,7 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
     private DefaultPasswordEncoder defaultPasswordEncoder;
     private RedisTemplate redisTemplate;
 
+    // 构造函数注入
     @Autowired
     public TokenWebSecurityConfig(UserDetailsService userDetailsService, DefaultPasswordEncoder defaultPasswordEncoder,
                                   TokenManager tokenManager, RedisTemplate redisTemplate) {
@@ -46,26 +42,28 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 配置设置
-     * @param http
-     * @throws Exception
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.exceptionHandling()
+                // 未授权访问
                 .authenticationEntryPoint(new UnauthorizedEntryPoint())
+                // 关闭csrf
                 .and().csrf().disable()
                 .authorizeRequests()
                 .anyRequest().authenticated()
+                // 退出路径
                 .and().logout().logoutUrl("/admin/acl/index/logout")
+                // 执行退出逻辑
                 .addLogoutHandler(new TokenLogoutHandler(tokenManager,redisTemplate)).and()
+                // 添加自定义过滤器：认证过滤器
                 .addFilter(new TokenLoginFilter(authenticationManager(), tokenManager, redisTemplate))
+                // 添加自定义过滤器：授权过滤器
                 .addFilter(new TokenAuthenticationFilter(authenticationManager(), tokenManager, redisTemplate)).httpBasic();
     }
 
     /**
      * 密码处理
-     * @param auth
-     * @throws Exception
      */
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -74,13 +72,15 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 配置哪些请求不拦截
-     * @param web
-     * @throws Exception
      */
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/api/**",
-                "/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**"
-               );
+        // 不需要认证路径
+        web.ignoring().antMatchers(
+                "/api/**",
+                "/swagger-resources/**",
+                "/webjars/**",
+                "/v2/**",
+                "/swagger-ui.html/**");
     }
 }
